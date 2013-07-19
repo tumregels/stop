@@ -1,0 +1,4769 @@
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 16:05:31 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin_1/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 16:12:21 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Reading directory files...
+OK.
+
+Calculating isotope fractions...
+OK.
+
+Reading data from ACE files:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+Reading energy arrays:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+ - Main grid thinned from 159443 to 137473 points using tolerance 1.00E-05.
+
+ - 25889 important points added resulting in a total of 140437 points.
+
+ - Final grid size 140218 points (1.00E-11 < E < 20.0).
+
+ - Total 2347 points in nubar grid.
+
+ - 2 energy groups in few-group structure.
+
+Processing XS data:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+Finalizing XS data...
+OK.
+
+Preparing statistics...
+OK.
+
+Setting partial reaction lists for material cross sections...
+OK.
+
+Calculating material total cross sections:
+material fuel...
+material clad...
+material sodium...
+material Pu238...
+material Pu239...
+material Pu240...
+material Pu241...
+material Pu242...
+OK.
+
+Starting the transport calculation cycle...
+
+Sampling initial source...
+OK.
+
+Inactive cycle   1 /  20: k-eff = 1.27900 (DT thresh = 0.9000)
+Inactive cycle   2 /  20: k-eff = 1.37492 (DT thresh = 0.9000)
+Inactive cycle   3 /  20: k-eff = 1.31855 (DT thresh = 0.9000)
+Inactive cycle   4 /  20: k-eff = 1.35811 (DT thresh = 0.9000)
+Inactive cycle   5 /  20: k-eff = 1.34045 (DT thresh = 0.9000)
+Inactive cycle   6 /  20: k-eff = 1.35922 (DT thresh = 0.9000)
+Inactive cycle   7 /  20: k-eff = 1.37417 (DT thresh = 0.9000)
+Inactive cycle   8 /  20: k-eff = 1.40028 (DT thresh = 0.9000)
+Inactive cycle   9 /  20: k-eff = 1.33447 (DT thresh = 0.9000)
+Inactive cycle  10 /  20: k-eff = 1.37317 (DT thresh = 0.9000)
+Inactive cycle  11 /  20: k-eff = 1.40338 (DT thresh = 0.9000)
+Inactive cycle  12 /  20: k-eff = 1.35286 (DT thresh = 0.9000)
+Inactive cycle  13 /  20: k-eff = 1.34474 (DT thresh = 0.9000)
+Inactive cycle  14 /  20: k-eff = 1.35415 (DT thresh = 0.9000)
+Inactive cycle  15 /  20: k-eff = 1.36499 (DT thresh = 0.9000)
+Inactive cycle  16 /  20: k-eff = 1.30356 (DT thresh = 0.9000)
+Inactive cycle  17 /  20: k-eff = 1.37917 (DT thresh = 0.9000)
+Inactive cycle  18 /  20: k-eff = 1.44675 (DT thresh = 0.9000)
+Inactive cycle  19 /  20: k-eff = 1.29050 (DT thresh = 0.9000)
+Inactive cycle  20 /  20: k-eff = 1.29308 (DT thresh = 0.9000)
+
+----- Begin active cycles -----
+
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    1 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.44, frac = 0.80
+
+Running time:                  0:00:08
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.38877 +/- 0.00000  [1.38877  1.38877]
+k-eff (implicit) = 1.32738 +/- 0.00000  [1.32738  1.32738]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    2 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.44, frac = 0.80
+
+Running time:                  0:00:08
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.38113 +/- 0.00764  [1.36616  1.39610]
+k-eff (implicit) = 1.34155 +/- 0.01417  [1.31378  1.36932]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    3 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:08
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.35890 +/- 0.02267  [1.31447  1.40332]
+k-eff (implicit) = 1.34046 +/- 0.00825  [1.32429  1.35664]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    4 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:09
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.33463 +/- 0.02908  [1.27764  1.39163]
+k-eff (implicit) = 1.33976 +/- 0.00588  [1.32824  1.35128]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    5 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:09
+Estimated running time:        0:00:27
+Estimated running time left:   0:00:18
+
+k-eff (analog)   = 1.31907 +/- 0.02738  [1.26541  1.37273]
+k-eff (implicit) = 1.33765 +/- 0.00502  [1.32781  1.34748]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    6 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:10
+Estimated running time:        0:00:27
+Estimated running time left:   0:00:17
+
+k-eff (analog)   = 1.30785 +/- 0.02501  [1.25883  1.35687]
+k-eff (implicit) = 1.33954 +/- 0.00451  [1.33069  1.34838]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    7 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:10
+Estimated running time:        0:00:27
+Estimated running time left:   0:00:16
+
+k-eff (analog)   = 1.31808 +/- 0.02348  [1.27206  1.36411]
+k-eff (implicit) = 1.34168 +/- 0.00437  [1.33311  1.35026]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    8 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:10
+Estimated running time:        0:00:27
+Estimated running time left:   0:00:16
+
+k-eff (analog)   = 1.32403 +/- 0.02119  [1.28250  1.36556]
+k-eff (implicit) = 1.33826 +/- 0.00511  [1.32824  1.34827]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    9 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:11
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:15
+
+k-eff (analog)   = 1.31333 +/- 0.02153  [1.27113  1.35554]
+k-eff (implicit) = 1.33509 +/- 0.00551  [1.32429  1.34588]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   10 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:11
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:15
+
+k-eff (analog)   = 1.31582 +/- 0.01942  [1.27776  1.35388]
+k-eff (implicit) = 1.33510 +/- 0.00493  [1.32544  1.34475]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   11 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:11
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:14
+
+k-eff (analog)   = 1.31190 +/- 0.01800  [1.27662  1.34717]
+k-eff (implicit) = 1.33365 +/- 0.00469  [1.32447  1.34283]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   12 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:12
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:14
+
+k-eff (analog)   = 1.30926 +/- 0.01664  [1.27665  1.34188]
+k-eff (implicit) = 1.33423 +/- 0.00432  [1.32577  1.34269]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   13 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:12
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:13
+
+k-eff (analog)   = 1.31550 +/- 0.01653  [1.28310  1.34790]
+k-eff (implicit) = 1.33450 +/- 0.00398  [1.32670  1.34230]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   14 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:12
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:13
+
+k-eff (analog)   = 1.31609 +/- 0.01532  [1.28607  1.34610]
+k-eff (implicit) = 1.33467 +/- 0.00369  [1.32744  1.34189]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   15 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:13
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:12
+
+k-eff (analog)   = 1.31783 +/- 0.01436  [1.28967  1.34598]
+k-eff (implicit) = 1.33465 +/- 0.00343  [1.32792  1.34138]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   16 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:13
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:12
+
+k-eff (analog)   = 1.31859 +/- 0.01346  [1.29222  1.34497]
+k-eff (implicit) = 1.33272 +/- 0.00375  [1.32537  1.34006]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   17 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:13
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:12
+
+k-eff (analog)   = 1.31990 +/- 0.01271  [1.29499  1.34481]
+k-eff (implicit) = 1.33285 +/- 0.00352  [1.32594  1.33975]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   18 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:14
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:11
+
+k-eff (analog)   = 1.32463 +/- 0.01288  [1.29938  1.34988]
+k-eff (implicit) = 1.33364 +/- 0.00341  [1.32695  1.34032]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   19 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:14
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:11
+
+k-eff (analog)   = 1.32399 +/- 0.01220  [1.30007  1.34790]
+k-eff (implicit) = 1.33553 +/- 0.00374  [1.32819  1.34286]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   20 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:14
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:10
+
+k-eff (analog)   = 1.32524 +/- 0.01164  [1.30242  1.34807]
+k-eff (implicit) = 1.33507 +/- 0.00358  [1.32805  1.34208]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   21 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:15
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:10
+
+k-eff (analog)   = 1.32760 +/- 0.01132  [1.30540  1.34980]
+k-eff (implicit) = 1.33456 +/- 0.00344  [1.32782  1.34131]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   22 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:15
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:10
+
+k-eff (analog)   = 1.32687 +/- 0.01082  [1.30566  1.34808]
+k-eff (implicit) = 1.33448 +/- 0.00328  [1.32805  1.34091]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   23 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:15
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:09
+
+k-eff (analog)   = 1.32945 +/- 0.01066  [1.30856  1.35034]
+k-eff (implicit) = 1.33466 +/- 0.00314  [1.32850  1.34081]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   24 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:16
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:09
+
+k-eff (analog)   = 1.33199 +/- 0.01052  [1.31138  1.35260]
+k-eff (implicit) = 1.33619 +/- 0.00337  [1.32957  1.34280]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   25 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:16
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:08
+
+k-eff (analog)   = 1.33672 +/- 0.01114  [1.31489  1.35856]
+k-eff (implicit) = 1.33732 +/- 0.00343  [1.33060  1.34404]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   26 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:16
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:08
+
+k-eff (analog)   = 1.33601 +/- 0.01073  [1.31499  1.35703]
+k-eff (implicit) = 1.33696 +/- 0.00331  [1.33046  1.34345]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   27 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:17
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:08
+
+k-eff (analog)   = 1.33413 +/- 0.01049  [1.31357  1.35469]
+k-eff (implicit) = 1.33699 +/- 0.00319  [1.33074  1.34324]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   28 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:17
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:07
+
+k-eff (analog)   = 1.33620 +/- 0.01032  [1.31597  1.35642]
+k-eff (implicit) = 1.33646 +/- 0.00312  [1.33035  1.34257]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   29 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:17
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:07
+
+k-eff (analog)   = 1.33711 +/- 0.01000  [1.31751  1.35671]
+k-eff (implicit) = 1.33605 +/- 0.00304  [1.33010  1.34200]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   30 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:18
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:07
+
+k-eff (analog)   = 1.33606 +/- 0.00972  [1.31701  1.35510]
+k-eff (implicit) = 1.33616 +/- 0.00294  [1.33040  1.34191]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   31 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:18
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:06
+
+k-eff (analog)   = 1.33330 +/- 0.00979  [1.31411  1.35250]
+k-eff (implicit) = 1.33655 +/- 0.00287  [1.33093  1.34217]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   32 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:18
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:06
+
+k-eff (analog)   = 1.33322 +/- 0.00948  [1.31464  1.35181]
+k-eff (implicit) = 1.33676 +/- 0.00278  [1.33130  1.34221]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   33 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:19
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:05
+
+k-eff (analog)   = 1.33536 +/- 0.00944  [1.31687  1.35386]
+k-eff (implicit) = 1.33708 +/- 0.00272  [1.33176  1.34240]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   34 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:19
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:05
+
+k-eff (analog)   = 1.33594 +/- 0.00917  [1.31796  1.35391]
+k-eff (implicit) = 1.33742 +/- 0.00266  [1.33221  1.34262]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   35 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:19
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:05
+
+k-eff (analog)   = 1.33547 +/- 0.00892  [1.31798  1.35295]
+k-eff (implicit) = 1.33771 +/- 0.00260  [1.33262  1.34279]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   36 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:20
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:04
+
+k-eff (analog)   = 1.33579 +/- 0.00867  [1.31879  1.35280]
+k-eff (implicit) = 1.33803 +/- 0.00254  [1.33304  1.34301]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   37 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:20
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:04
+
+k-eff (analog)   = 1.33574 +/- 0.00844  [1.31920  1.35228]
+k-eff (implicit) = 1.33824 +/- 0.00248  [1.33337  1.34310]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   38 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:21
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:04
+
+k-eff (analog)   = 1.33474 +/- 0.00827  [1.31853  1.35095]
+k-eff (implicit) = 1.33760 +/- 0.00250  [1.33270  1.34250]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   39 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:21
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:03
+
+k-eff (analog)   = 1.33509 +/- 0.00807  [1.31928  1.35090]
+k-eff (implicit) = 1.33757 +/- 0.00243  [1.33280  1.34234]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   40 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:21
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:03
+
+k-eff (analog)   = 1.33650 +/- 0.00799  [1.32085  1.35215]
+k-eff (implicit) = 1.33825 +/- 0.00247  [1.33341  1.34308]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   41 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:21
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:03
+
+k-eff (analog)   = 1.33604 +/- 0.00780  [1.32075  1.35134]
+k-eff (implicit) = 1.33889 +/- 0.00249  [1.33401  1.34377]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   42 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:22
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:02
+
+k-eff (analog)   = 1.33743 +/- 0.00774  [1.32226  1.35260]
+k-eff (implicit) = 1.33929 +/- 0.00246  [1.33446  1.34412]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   43 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:22
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:02
+
+k-eff (analog)   = 1.33878 +/- 0.00768  [1.32373  1.35383]
+k-eff (implicit) = 1.33925 +/- 0.00241  [1.33454  1.34397]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   44 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:23
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:02
+
+k-eff (analog)   = 1.33677 +/- 0.00776  [1.32156  1.35199]
+k-eff (implicit) = 1.33867 +/- 0.00242  [1.33392  1.34342]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   45 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:23
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:01
+
+k-eff (analog)   = 1.33616 +/- 0.00762  [1.32124  1.35109]
+k-eff (implicit) = 1.33800 +/- 0.00246  [1.33318  1.34282]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   46 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:23
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:01
+
+k-eff (analog)   = 1.33851 +/- 0.00781  [1.32320  1.35381]
+k-eff (implicit) = 1.33810 +/- 0.00241  [1.33338  1.34281]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   47 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:24
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:01
+
+k-eff (analog)   = 1.33664 +/- 0.00787  [1.32122  1.35206]
+k-eff (implicit) = 1.33829 +/- 0.00236  [1.33366  1.34293]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   48 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:24
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:00
+
+k-eff (analog)   = 1.33544 +/- 0.00779  [1.32017  1.35072]
+k-eff (implicit) = 1.33823 +/- 0.00232  [1.33369  1.34277]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   49 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:24
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:00
+
+k-eff (analog)   = 1.33430 +/- 0.00772  [1.31917  1.34942]
+k-eff (implicit) = 1.33785 +/- 0.00230  [1.33335  1.34236]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   50 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:25
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:00
+
+k-eff (analog)   = 1.33348 +/- 0.00761  [1.31857  1.34839]
+k-eff (implicit) = 1.33726 +/- 0.00233  [1.33270  1.34182]
+
+------------------------------------------------------------
+
+Finished after 50 active cycles of 1000 source neutrons.
+Total calculation time 0.42 minutes.
+
+No errors or warning messages.
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 16:16:12 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Reading directory files...
+OK.
+
+Calculating isotope fractions...
+OK.
+
+Reading data from ACE files:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+Reading energy arrays:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+ - Main grid thinned from 159443 to 137473 points using tolerance 1.00E-05.
+
+ - 25889 important points added resulting in a total of 140437 points.
+
+ - Final grid size 140218 points (1.00E-11 < E < 20.0).
+
+ - Total 2347 points in nubar grid.
+
+ - 2 energy groups in few-group structure.
+
+Processing XS data:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+Finalizing XS data...
+OK.
+
+Preparing statistics...
+OK.
+
+Setting partial reaction lists for material cross sections...
+OK.
+
+Calculating material total cross sections:
+material fuel...
+material clad...
+material sodium...
+material Pu238...
+material Pu239...
+material Pu240...
+material Pu241...
+material Pu242...
+OK.
+
+Starting the transport calculation cycle...
+
+Sampling initial source...
+OK.
+
+Inactive cycle   1 /  20: k-eff = 1.28200 (DT thresh = 0.9000)
+Inactive cycle   2 /  20: k-eff = 1.33841 (DT thresh = 0.9000)
+Inactive cycle   3 /  20: k-eff = 1.35179 (DT thresh = 0.9000)
+Inactive cycle   4 /  20: k-eff = 1.38964 (DT thresh = 0.9000)
+Inactive cycle   5 /  20: k-eff = 1.36602 (DT thresh = 0.9000)
+Inactive cycle   6 /  20: k-eff = 1.34826 (DT thresh = 0.9000)
+Inactive cycle   7 /  20: k-eff = 1.36039 (DT thresh = 0.9000)
+Inactive cycle   8 /  20: k-eff = 1.37400 (DT thresh = 0.9000)
+Inactive cycle   9 /  20: k-eff = 1.40010 (DT thresh = 0.9000)
+Inactive cycle  10 /  20: k-eff = 1.33430 (DT thresh = 0.9000)
+Inactive cycle  11 /  20: k-eff = 1.33830 (DT thresh = 0.9000)
+Inactive cycle  12 /  20: k-eff = 1.34366 (DT thresh = 0.9000)
+Inactive cycle  13 /  20: k-eff = 1.34634 (DT thresh = 0.9000)
+Inactive cycle  14 /  20: k-eff = 1.30057 (DT thresh = 0.9000)
+Inactive cycle  15 /  20: k-eff = 1.39811 (DT thresh = 0.9000)
+Inactive cycle  16 /  20: k-eff = 1.41209 (DT thresh = 0.9000)
+Inactive cycle  17 /  20: k-eff = 1.40079 (DT thresh = 0.9000)
+Inactive cycle  18 /  20: k-eff = 1.32375 (DT thresh = 0.9000)
+Inactive cycle  19 /  20: k-eff = 1.34096 (DT thresh = 0.9000)
+Inactive cycle  20 /  20: k-eff = 1.30744 (DT thresh = 0.9000)
+
+----- Begin active cycles -----
+
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    1 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:08
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.29828 +/- 0.00000  [1.29828  1.29828]
+k-eff (implicit) = 1.34943 +/- 0.00000  [1.34943  1.34943]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    2 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:08
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.32814 +/- 0.02986  [1.26962  1.38667]
+k-eff (implicit) = 1.34870 +/- 0.00073  [1.34727  1.35013]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    3 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:09
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.33448 +/- 0.01837  [1.29848  1.37047]
+k-eff (implicit) = 1.35575 +/- 0.00706  [1.34191  1.36959]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    4 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:09
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.32922 +/- 0.01401  [1.30176  1.35668]
+k-eff (implicit) = 1.34403 +/- 0.01274  [1.31905  1.36900]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    5 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:09
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.31766 +/- 0.01585  [1.28659  1.34874]
+k-eff (implicit) = 1.34348 +/- 0.00989  [1.32410  1.36285]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    6 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:10
+Estimated running time:        0:00:27
+Estimated running time left:   0:00:17
+
+k-eff (analog)   = 1.31483 +/- 0.01325  [1.28886  1.34080]
+k-eff (implicit) = 1.34451 +/- 0.00814  [1.32856  1.36046]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    7 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:10
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:16
+
+k-eff (analog)   = 1.32284 +/- 0.01377  [1.29586  1.34983]
+k-eff (implicit) = 1.34594 +/- 0.00702  [1.33217  1.35971]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    8 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:10
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:15
+
+k-eff (analog)   = 1.32611 +/- 0.01236  [1.30188  1.35034]
+k-eff (implicit) = 1.34683 +/- 0.00615  [1.33478  1.35888]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    9 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:11
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:15
+
+k-eff (analog)   = 1.32700 +/- 0.01094  [1.30556  1.34844]
+k-eff (implicit) = 1.34775 +/- 0.00550  [1.33697  1.35852]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   10 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:11
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:14
+
+k-eff (analog)   = 1.33145 +/- 0.01075  [1.31038  1.35252]
+k-eff (implicit) = 1.34661 +/- 0.00505  [1.33671  1.35650]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   11 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:11
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:14
+
+k-eff (analog)   = 1.32973 +/- 0.00987  [1.31038  1.34908]
+k-eff (implicit) = 1.34786 +/- 0.00473  [1.33858  1.35714]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   12 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:12
+Estimated running time:        0:00:26
+Estimated running time left:   0:00:13
+
+k-eff (analog)   = 1.33376 +/- 0.00988  [1.31441  1.35312]
+k-eff (implicit) = 1.34643 +/- 0.00455  [1.33751  1.35536]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   13 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:12
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:13
+
+k-eff (analog)   = 1.33569 +/- 0.00929  [1.31749  1.35390]
+k-eff (implicit) = 1.34626 +/- 0.00419  [1.33805  1.35447]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   14 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:12
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:13
+
+k-eff (analog)   = 1.33657 +/- 0.00864  [1.31963  1.35351]
+k-eff (implicit) = 1.34656 +/- 0.00389  [1.33893  1.35418]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   15 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:13
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:12
+
+k-eff (analog)   = 1.33437 +/- 0.00834  [1.31802  1.35072]
+k-eff (implicit) = 1.34615 +/- 0.00365  [1.33900  1.35329]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   16 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:13
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:12
+
+k-eff (analog)   = 1.33781 +/- 0.00853  [1.32109  1.35454]
+k-eff (implicit) = 1.34486 +/- 0.00365  [1.33771  1.35200]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   17 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:13
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:11
+
+k-eff (analog)   = 1.33530 +/- 0.00840  [1.31883  1.35176]
+k-eff (implicit) = 1.34438 +/- 0.00346  [1.33761  1.35116]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   18 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:14
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:11
+
+k-eff (analog)   = 1.33472 +/- 0.00794  [1.31915  1.35028]
+k-eff (implicit) = 1.34671 +/- 0.00400  [1.33886  1.35456]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   19 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:14
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:10
+
+k-eff (analog)   = 1.33413 +/- 0.00753  [1.31936  1.34889]
+k-eff (implicit) = 1.34713 +/- 0.00381  [1.33966  1.35461]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   20 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:14
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:10
+
+k-eff (analog)   = 1.33161 +/- 0.00758  [1.31676  1.34646]
+k-eff (implicit) = 1.34620 +/- 0.00374  [1.33888  1.35352]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   21 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:15
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:10
+
+k-eff (analog)   = 1.33355 +/- 0.00746  [1.31892  1.34818]
+k-eff (implicit) = 1.34630 +/- 0.00355  [1.33933  1.35326]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   22 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:15
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:09
+
+k-eff (analog)   = 1.33956 +/- 0.00931  [1.32130  1.35781]
+k-eff (implicit) = 1.34641 +/- 0.00339  [1.33976  1.35306]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   23 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:15
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:09
+
+k-eff (analog)   = 1.34249 +/- 0.00937  [1.32413  1.36086]
+k-eff (implicit) = 1.34641 +/- 0.00324  [1.34006  1.35276]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   24 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:16
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:09
+
+k-eff (analog)   = 1.34049 +/- 0.00919  [1.32248  1.35851]
+k-eff (implicit) = 1.34411 +/- 0.00386  [1.33654  1.35168]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   25 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:16
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:08
+
+k-eff (analog)   = 1.34337 +/- 0.00927  [1.32519  1.36154]
+k-eff (implicit) = 1.34453 +/- 0.00373  [1.33723  1.35184]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   26 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:16
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:08
+
+k-eff (analog)   = 1.34363 +/- 0.00891  [1.32616  1.36110]
+k-eff (implicit) = 1.34562 +/- 0.00374  [1.33829  1.35296]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   27 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:17
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:08
+
+k-eff (analog)   = 1.34467 +/- 0.00864  [1.32774  1.36160]
+k-eff (implicit) = 1.34540 +/- 0.00361  [1.33833  1.35247]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   28 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:17
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:07
+
+k-eff (analog)   = 1.34608 +/- 0.00844  [1.32953  1.36263]
+k-eff (implicit) = 1.34555 +/- 0.00348  [1.33873  1.35237]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   29 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:17
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:07
+
+k-eff (analog)   = 1.34672 +/- 0.00817  [1.33070  1.36274]
+k-eff (implicit) = 1.34587 +/- 0.00337  [1.33926  1.35249]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   30 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:18
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:07
+
+k-eff (analog)   = 1.34632 +/- 0.00791  [1.33083  1.36182]
+k-eff (implicit) = 1.34548 +/- 0.00328  [1.33905  1.35191]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   31 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:18
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:06
+
+k-eff (analog)   = 1.34573 +/- 0.00767  [1.33070  1.36076]
+k-eff (implicit) = 1.34568 +/- 0.00318  [1.33944  1.35191]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   32 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:19
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:06
+
+k-eff (analog)   = 1.34597 +/- 0.00743  [1.33141  1.36053]
+k-eff (implicit) = 1.34549 +/- 0.00309  [1.33944  1.35153]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   33 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:19
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:05
+
+k-eff (analog)   = 1.34611 +/- 0.00720  [1.33199  1.36022]
+k-eff (implicit) = 1.34458 +/- 0.00312  [1.33846  1.35071]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   34 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:19
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:05
+
+k-eff (analog)   = 1.34747 +/- 0.00712  [1.33352  1.36142]
+k-eff (implicit) = 1.34445 +/- 0.00303  [1.33850  1.35039]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   35 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:20
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:05
+
+k-eff (analog)   = 1.34561 +/- 0.00716  [1.33158  1.35964]
+k-eff (implicit) = 1.34433 +/- 0.00295  [1.33855  1.35011]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   36 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:20
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:04
+
+k-eff (analog)   = 1.34564 +/- 0.00696  [1.33200  1.35927]
+k-eff (implicit) = 1.34447 +/- 0.00287  [1.33885  1.35010]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   37 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:20
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:04
+
+k-eff (analog)   = 1.34610 +/- 0.00678  [1.33281  1.35939]
+k-eff (implicit) = 1.34473 +/- 0.00280  [1.33924  1.35022]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   38 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:21
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:04
+
+k-eff (analog)   = 1.34460 +/- 0.00677  [1.33133  1.35786]
+k-eff (implicit) = 1.34394 +/- 0.00284  [1.33838  1.34951]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   39 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:21
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:03
+
+k-eff (analog)   = 1.34255 +/- 0.00690  [1.32902  1.35608]
+k-eff (implicit) = 1.34366 +/- 0.00278  [1.33822  1.34911]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   40 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:21
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:03
+
+k-eff (analog)   = 1.34262 +/- 0.00673  [1.32943  1.35581]
+k-eff (implicit) = 1.34352 +/- 0.00271  [1.33820  1.34883]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   41 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:22
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:03
+
+k-eff (analog)   = 1.34486 +/- 0.00693  [1.33127  1.35845]
+k-eff (implicit) = 1.34271 +/- 0.00277  [1.33729  1.34813]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   42 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:22
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:02
+
+k-eff (analog)   = 1.34324 +/- 0.00696  [1.32959  1.35688]
+k-eff (implicit) = 1.34258 +/- 0.00270  [1.33728  1.34787]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   43 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:22
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:02
+
+k-eff (analog)   = 1.34439 +/- 0.00689  [1.33088  1.35790]
+k-eff (implicit) = 1.34280 +/- 0.00265  [1.33761  1.34799]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   44 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:23
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:02
+
+k-eff (analog)   = 1.34618 +/- 0.00697  [1.33252  1.35984]
+k-eff (implicit) = 1.34299 +/- 0.00259  [1.33790  1.34808]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   45 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:23
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:01
+
+k-eff (analog)   = 1.34477 +/- 0.00696  [1.33113  1.35841]
+k-eff (implicit) = 1.34283 +/- 0.00254  [1.33784  1.34781]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   46 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:23
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:01
+
+k-eff (analog)   = 1.34654 +/- 0.00703  [1.33275  1.36032]
+k-eff (implicit) = 1.34302 +/- 0.00249  [1.33813  1.34791]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   47 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:24
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:01
+
+k-eff (analog)   = 1.34705 +/- 0.00690  [1.33352  1.36057]
+k-eff (implicit) = 1.34296 +/- 0.00244  [1.33818  1.34775]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   48 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:24
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:00
+
+k-eff (analog)   = 1.34619 +/- 0.00681  [1.33285  1.35954]
+k-eff (implicit) = 1.34231 +/- 0.00248  [1.33745  1.34716]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   49 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:24
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:00
+
+k-eff (analog)   = 1.34609 +/- 0.00667  [1.33302  1.35916]
+k-eff (implicit) = 1.34277 +/- 0.00247  [1.33793  1.34761]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   50 / 50 (1000 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:25
+Estimated running time:        0:00:25
+Estimated running time left:   0:00:00
+
+k-eff (analog)   = 1.34471 +/- 0.00668  [1.33162  1.35780]
+k-eff (implicit) = 1.34342 +/- 0.00251  [1.33851  1.34833]
+
+------------------------------------------------------------
+
+Finished after 50 active cycles of 1000 source neutrons.
+Total calculation time 0.42 minutes.
+
+No errors or warning messages.
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 16:17:47 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Reading directory files...
+OK.
+
+Calculating isotope fractions...
+OK.
+
+Reading data from ACE files:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+Reading energy arrays:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+ - Main grid thinned from 159443 to 137473 points using tolerance 1.00E-05.
+
+ - 25889 important points added resulting in a total of 140437 points.
+
+ - Final grid size 140218 points (1.00E-11 < E < 20.0).
+
+ - Total 2347 points in nubar grid.
+
+ - 2 energy groups in few-group structure.
+
+Processing XS data:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+Finalizing XS data...
+OK.
+
+Preparing statistics...
+OK.
+
+Setting partial reaction lists for material cross sections...
+OK.
+
+Calculating material total cross sections:
+material fuel...
+material clad...
+material sodium...
+material Pu238...
+material Pu239...
+material Pu240...
+material Pu241...
+material Pu242...
+OK.
+
+Starting the transport calculation cycle...
+
+Sampling initial source...
+OK.
+
+Inactive cycle   1 /  20: k-eff = 1.34000 (DT thresh = 0.9000)
+Inactive cycle   2 /  20: k-eff = 1.20600 (DT thresh = 0.9000)
+Inactive cycle   3 /  20: k-eff = 1.53162 (DT thresh = 0.9000)
+Inactive cycle   4 /  20: k-eff = 1.48567 (DT thresh = 0.9000)
+Inactive cycle   5 /  20: k-eff = 1.42624 (DT thresh = 0.9000)
+Inactive cycle   6 /  20: k-eff = 1.44051 (DT thresh = 0.9000)
+Inactive cycle   7 /  20: k-eff = 1.19562 (DT thresh = 0.9000)
+Inactive cycle   8 /  20: k-eff = 1.69778 (DT thresh = 0.9000)
+Inactive cycle   9 /  20: k-eff = 1.35823 (DT thresh = 0.9000)
+Inactive cycle  10 /  20: k-eff = 1.24957 (DT thresh = 0.9000)
+Inactive cycle  11 /  20: k-eff = 1.44950 (DT thresh = 0.9000)
+Inactive cycle  12 /  20: k-eff = 1.57995 (DT thresh = 0.9000)
+Inactive cycle  13 /  20: k-eff = 1.18496 (DT thresh = 0.9000)
+Inactive cycle  14 /  20: k-eff = 1.51675 (DT thresh = 0.9000)
+Inactive cycle  15 /  20: k-eff = 1.19824 (DT thresh = 0.9000)
+Inactive cycle  16 /  20: k-eff = 1.46185 (DT thresh = 0.9000)
+Inactive cycle  17 /  20: k-eff = 1.30104 (DT thresh = 0.9000)
+Inactive cycle  18 /  20: k-eff = 1.09288 (DT thresh = 0.9000)
+Inactive cycle  19 /  20: k-eff = 1.10381 (DT thresh = 0.9000)
+Inactive cycle  20 /  20: k-eff = 1.37976 (DT thresh = 0.9000)
+
+----- Begin active cycles -----
+
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    1 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.37976 +/- 0.00000  [1.37976  1.37976]
+k-eff (implicit) = 1.34510 +/- 0.00000  [1.34510  1.34510]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    2 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.20039 +/- 0.17937  [0.84883  1.55195]
+k-eff (implicit) = 1.37394 +/- 0.02884  [1.31741  1.43048]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    3 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.44, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.29035 +/- 0.13718  [1.02149  1.55921]
+k-eff (implicit) = 1.36990 +/- 0.01714  [1.33632  1.40349]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    4 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.44, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.30960 +/- 0.09889  [1.11578  1.50342]
+k-eff (implicit) = 1.35390 +/- 0.02007  [1.31456  1.39324]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    5 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.31568 +/- 0.07684  [1.16507  1.46629]
+k-eff (implicit) = 1.34666 +/- 0.01715  [1.31305  1.38028]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    6 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.80
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.31527 +/- 0.06274  [1.19229  1.43824]
+k-eff (implicit) = 1.34322 +/- 0.01442  [1.31496  1.37148]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    7 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.31310 +/- 0.05307  [1.20908  1.41712]
+k-eff (implicit) = 1.34374 +/- 0.01220  [1.31983  1.36765]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    8 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.30172 +/- 0.04735  [1.20892  1.39452]
+k-eff (implicit) = 1.33152 +/- 0.01615  [1.29987  1.36318]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    9 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.27250 +/- 0.05096  [1.17261  1.37239]
+k-eff (implicit) = 1.32274 +/- 0.01674  [1.28993  1.35554]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   10 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.28237 +/- 0.04664  [1.19095  1.37378]
+k-eff (implicit) = 1.32108 +/- 0.01506  [1.29156  1.35059]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   11 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.28171 +/- 0.04219  [1.19902  1.36441]
+k-eff (implicit) = 1.32408 +/- 0.01395  [1.29674  1.35142]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   12 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.28329 +/- 0.03855  [1.20774  1.35885]
+k-eff (implicit) = 1.32662 +/- 0.01298  [1.30117  1.35206]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   13 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.28863 +/- 0.03586  [1.21835  1.35892]
+k-eff (implicit) = 1.32824 +/- 0.01205  [1.30461  1.35187]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   14 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.28162 +/- 0.03393  [1.21511  1.34812]
+k-eff (implicit) = 1.33067 +/- 0.01142  [1.30829  1.35306]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   15 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.27791 +/- 0.03181  [1.21558  1.34025]
+k-eff (implicit) = 1.33035 +/- 0.01064  [1.30950  1.35120]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   16 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.28540 +/- 0.03068  [1.22527  1.34554]
+k-eff (implicit) = 1.32863 +/- 0.01010  [1.30884  1.34842]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   17 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.29941 +/- 0.03204  [1.23661  1.36222]
+k-eff (implicit) = 1.33292 +/- 0.01041  [1.31252  1.35331]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   18 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.43, frac = 0.80
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.30425 +/- 0.03059  [1.24428  1.36421]
+k-eff (implicit) = 1.33415 +/- 0.00989  [1.31477  1.35353]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   19 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.44, frac = 0.80
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.31368 +/- 0.03044  [1.25402  1.37334]
+k-eff (implicit) = 1.33130 +/- 0.00978  [1.31214  1.35047]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   20 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.44, frac = 0.80
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.31772 +/- 0.02916  [1.26057  1.37487]
+k-eff (implicit) = 1.33761 +/- 0.01122  [1.31562  1.35959]
+
+------------------------------------------------------------
+
+Finished after 20 active cycles of 100 source neutrons.
+Total calculation time 0.06 minutes.
+
+No errors or warning messages.
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 16:18:33 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Reading directory files...
+OK.
+
+Calculating isotope fractions...
+OK.
+
+Reading data from ACE files:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+Reading energy arrays:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+ - Main grid thinned from 159443 to 137473 points using tolerance 1.00E-05.
+
+ - 25889 important points added resulting in a total of 140437 points.
+
+ - Final grid size 140218 points (1.00E-11 < E < 20.0).
+
+ - Total 2347 points in nubar grid.
+
+ - 2 energy groups in few-group structure.
+
+Processing XS data:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+Finalizing XS data...
+OK.
+
+Preparing statistics...
+OK.
+
+Setting partial reaction lists for material cross sections...
+OK.
+
+Calculating material total cross sections:
+material fuel...
+material clad...
+material sodium...
+material Pu238...
+material Pu239...
+material Pu240...
+material Pu241...
+material Pu242...
+OK.
+
+Starting the transport calculation cycle...
+
+Sampling initial source...
+OK.
+
+Inactive cycle   1 /  20: k-eff = 1.09000 (DT thresh = 0.9000)
+Inactive cycle   2 /  20: k-eff = 1.07910 (DT thresh = 0.9000)
+Inactive cycle   3 /  20: k-eff = 1.31650 (DT thresh = 0.9000)
+Inactive cycle   4 /  20: k-eff = 1.26384 (DT thresh = 0.9000)
+Inactive cycle   5 /  20: k-eff = 1.21329 (DT thresh = 0.9000)
+Inactive cycle   6 /  20: k-eff = 1.38315 (DT thresh = 0.9000)
+Inactive cycle   7 /  20: k-eff = 1.52146 (DT thresh = 0.9000)
+Inactive cycle   8 /  20: k-eff = 1.21717 (DT thresh = 0.9000)
+Inactive cycle   9 /  20: k-eff = 1.36323 (DT thresh = 0.9000)
+Inactive cycle  10 /  20: k-eff = 1.21328 (DT thresh = 0.9000)
+Inactive cycle  11 /  20: k-eff = 1.23754 (DT thresh = 0.9000)
+Inactive cycle  12 /  20: k-eff = 1.28704 (DT thresh = 0.9000)
+Inactive cycle  13 /  20: k-eff = 1.32565 (DT thresh = 0.9000)
+Inactive cycle  14 /  20: k-eff = 1.43171 (DT thresh = 0.9000)
+Inactive cycle  15 /  20: k-eff = 1.50329 (DT thresh = 0.9000)
+Inactive cycle  16 /  20: k-eff = 1.12747 (DT thresh = 0.9000)
+Inactive cycle  17 /  20: k-eff = 1.26277 (DT thresh = 0.9000)
+Inactive cycle  18 /  20: k-eff = 1.30065 (DT thresh = 0.9000)
+Inactive cycle  19 /  20: k-eff = 1.56078 (DT thresh = 0.9000)
+Inactive cycle  20 /  20: k-eff = 1.13937 (DT thresh = 0.9000)
+
+----- Begin active cycles -----
+
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    1 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.48, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.52675 +/- 0.00000  [1.52675  1.52675]
+k-eff (implicit) = 1.36073 +/- 0.00000  [1.36073  1.36073]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    2 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.46, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.40461 +/- 0.12214  [1.16522  1.64401]
+k-eff (implicit) = 1.32600 +/- 0.03472  [1.25794  1.39406]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    3 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.40665 +/- 0.07055  [1.26838  1.54492]
+k-eff (implicit) = 1.34875 +/- 0.03032  [1.28932  1.40818]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    4 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.35476 +/- 0.07198  [1.21369  1.49584]
+k-eff (implicit) = 1.35428 +/- 0.02214  [1.31088  1.39769]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    5 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.37400 +/- 0.05898  [1.25840  1.48959]
+k-eff (implicit) = 1.35759 +/- 0.01747  [1.32335  1.39183]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    6 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.36989 +/- 0.04833  [1.27517  1.46461]
+k-eff (implicit) = 1.34122 +/- 0.02171  [1.29866  1.38378]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    7 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.36310 +/- 0.04140  [1.28195  1.44426]
+k-eff (implicit) = 1.34808 +/- 0.01959  [1.30968  1.38647]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    8 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.39272 +/- 0.04651  [1.30156  1.48388]
+k-eff (implicit) = 1.35039 +/- 0.01712  [1.31683  1.38395]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    9 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.38376 +/- 0.04199  [1.30147  1.46605]
+k-eff (implicit) = 1.37317 +/- 0.02733  [1.31960  1.42673]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   10 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.44, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.35822 +/- 0.04541  [1.26921  1.44723]
+k-eff (implicit) = 1.36351 +/- 0.02628  [1.31199  1.41502]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   11 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.44, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.37425 +/- 0.04410  [1.28782  1.46068]
+k-eff (implicit) = 1.36767 +/- 0.02414  [1.32036  1.41498]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   12 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.44, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.36715 +/- 0.04088  [1.28704  1.44727]
+k-eff (implicit) = 1.36859 +/- 0.02205  [1.32536  1.41181]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   13 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.36610 +/- 0.03762  [1.29238  1.43983]
+k-eff (implicit) = 1.36468 +/- 0.02066  [1.32419  1.40517]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   14 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.37391 +/- 0.03569  [1.30396  1.44385]
+k-eff (implicit) = 1.36818 +/- 0.01944  [1.33007  1.40628]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   15 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.36100 +/- 0.03564  [1.29113  1.43086]
+k-eff (implicit) = 1.36437 +/- 0.01850  [1.32812  1.40062]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   16 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.35855 +/- 0.03343  [1.29303  1.42408]
+k-eff (implicit) = 1.36048 +/- 0.01773  [1.32573  1.39524]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   17 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.34240 +/- 0.03531  [1.27318  1.41161]
+k-eff (implicit) = 1.35803 +/- 0.01684  [1.32504  1.39103]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   18 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.33466 +/- 0.03418  [1.26767  1.40166]
+k-eff (implicit) = 1.35268 +/- 0.01675  [1.31985  1.38551]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   19 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.34231 +/- 0.03322  [1.27719  1.40743]
+k-eff (implicit) = 1.35872 +/- 0.01696  [1.32548  1.39195]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   20 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.45, frac = 0.81
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.35437 +/- 0.03375  [1.28822  1.42051]
+k-eff (implicit) = 1.36169 +/- 0.01636  [1.32963  1.39375]
+
+------------------------------------------------------------
+
+Finished after 20 active cycles of 100 source neutrons.
+Total calculation time 0.06 minutes.
+
+No errors or warning messages.
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 16:21:36 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 16:21:51 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Reading directory files...
+OK.
+
+Calculating isotope fractions...
+OK.
+
+Reading data from ACE files:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+Reading energy arrays:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+ - Main grid thinned from 159443 to 137473 points using tolerance 1.00E-05.
+
+ - 25889 important points added resulting in a total of 140437 points.
+
+ - Final grid size 140218 points (1.00E-11 < E < 20.0).
+
+ - Total 2347 points in nubar grid.
+
+ - 2 energy groups in few-group structure.
+
+Processing XS data:
+Isotope   8016.15c (O-16)...
+Isotope  11023.09c (Na-23)...
+Isotope  26054.09c (Fe-54)...
+Isotope  26056.09c (Fe-56)...
+Isotope  26057.09c (Fe-57)...
+Isotope  26058.09c (Fe-58)...
+Isotope  92238.15c (U-238)...
+Isotope  94238.09c (Pu-238)...
+Isotope  94238.15c (Pu-238)...
+Isotope  94239.09c (Pu-239)...
+Isotope  94239.15c (Pu-239)...
+Isotope  94240.09c (Pu-240)...
+Isotope  94240.15c (Pu-240)...
+Isotope  94241.09c (Pu-241)...
+Isotope  94241.15c (Pu-241)...
+Isotope  94242.09c (Pu-242)...
+Isotope  94242.15c (Pu-242)...
+OK.
+
+Finalizing XS data...
+OK.
+
+Preparing statistics...
+OK.
+
+Setting partial reaction lists for material cross sections...
+OK.
+
+Calculating material total cross sections:
+material fuel...
+material clad...
+material sodium...
+material Pu238...
+material Pu239...
+material Pu240...
+material Pu241...
+material Pu242...
+OK.
+
+Starting the transport calculation cycle...
+
+Sampling initial source...
+OK.
+
+Inactive cycle   1 /  20: k-eff = 1.27000 (DT thresh = 0.9000)
+Inactive cycle   2 /  20: k-eff = 1.10490 (DT thresh = 0.9000)
+Inactive cycle   3 /  20: k-eff = 1.49161 (DT thresh = 0.9000)
+Inactive cycle   4 /  20: k-eff = 1.41703 (DT thresh = 0.9000)
+Inactive cycle   5 /  20: k-eff = 1.50206 (DT thresh = 0.9000)
+Inactive cycle   6 /  20: k-eff = 1.26173 (DT thresh = 0.9000)
+Inactive cycle   7 /  20: k-eff = 1.29958 (DT thresh = 0.9000)
+Inactive cycle   8 /  20: k-eff = 1.36456 (DT thresh = 0.9000)
+Inactive cycle   9 /  20: k-eff = 1.13258 (DT thresh = 0.9000)
+Inactive cycle  10 /  20: k-eff = 1.27982 (DT thresh = 0.9000)
+Inactive cycle  11 /  20: k-eff = 1.42060 (DT thresh = 0.9000)
+Inactive cycle  12 /  20: k-eff = 1.44901 (DT thresh = 0.9000)
+Inactive cycle  13 /  20: k-eff = 1.34758 (DT thresh = 0.9000)
+Inactive cycle  14 /  20: k-eff = 1.13197 (DT thresh = 0.9000)
+Inactive cycle  15 /  20: k-eff = 1.51684 (DT thresh = 0.9000)
+Inactive cycle  16 /  20: k-eff = 1.28931 (DT thresh = 0.9000)
+Inactive cycle  17 /  20: k-eff = 1.21195 (DT thresh = 0.9000)
+Inactive cycle  18 /  20: k-eff = 1.22407 (DT thresh = 0.9000)
+Inactive cycle  19 /  20: k-eff = 1.33424 (DT thresh = 0.9000)
+Inactive cycle  20 /  20: k-eff = 1.29421 (DT thresh = 0.9000)
+
+----- Begin active cycles -----
+
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    1 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.38, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.06125 +/- 0.00000  [1.06125  1.06125]
+k-eff (implicit) = 1.29314 +/- 0.00000  [1.29314  1.29314]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    2 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.39, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.22044 +/- 0.15919  [0.90843  1.53245]
+k-eff (implicit) = 1.28754 +/- 0.00560  [1.27656  1.29852]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    3 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.40, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.33329 +/- 0.14554  [1.04803  1.61854]
+k-eff (implicit) = 1.31189 +/- 0.02456  [1.26375  1.36003]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    4 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.31956 +/- 0.10382  [1.11606  1.52305]
+k-eff (implicit) = 1.30848 +/- 0.01770  [1.27379  1.34317]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    5 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.32666 +/- 0.08073  [1.16842  1.48490]
+k-eff (implicit) = 1.31760 +/- 0.01647  [1.28533  1.34988]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    6 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.42, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.31107 +/- 0.06774  [1.17830  1.44383]
+k-eff (implicit) = 1.31741 +/- 0.01345  [1.29106  1.34377]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    7 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.28408 +/- 0.06329  [1.16002  1.40813]
+k-eff (implicit) = 1.31712 +/- 0.01137  [1.29484  1.33940]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    8 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.29469 +/- 0.05583  [1.18526  1.40412]
+k-eff (implicit) = 1.31485 +/- 0.01010  [1.29506  1.33465]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle    9 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.30751 +/- 0.05088  [1.20779  1.40724]
+k-eff (implicit) = 1.32249 +/- 0.01173  [1.29949  1.34549]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   10 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.32764 +/- 0.04976  [1.23011  1.42517]
+k-eff (implicit) = 1.32546 +/- 0.01091  [1.30409  1.34684]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   11 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.33999 +/- 0.04667  [1.24851  1.43147]
+k-eff (implicit) = 1.32938 +/- 0.01062  [1.30858  1.35019]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   12 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.33199 +/- 0.04335  [1.24702  1.41696]
+k-eff (implicit) = 1.32647 +/- 0.01012  [1.30664  1.34631]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   13 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.34914 +/- 0.04341  [1.26406  1.43423]
+k-eff (implicit) = 1.32345 +/- 0.00979  [1.30426  1.34263]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   14 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.36273 +/- 0.04243  [1.27958  1.44589]
+k-eff (implicit) = 1.32709 +/- 0.00977  [1.30795  1.34623]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   15 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.36322 +/- 0.03950  [1.28580  1.44065]
+k-eff (implicit) = 1.32794 +/- 0.00913  [1.31004  1.34583]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   16 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.34567 +/- 0.04091  [1.26549  1.42585]
+k-eff (implicit) = 1.32362 +/- 0.00957  [1.30486  1.34238]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   17 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.33464 +/- 0.03998  [1.25629  1.41300]
+k-eff (implicit) = 1.31523 +/- 0.01229  [1.29114  1.33933]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   18 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.33449 +/- 0.03769  [1.26061  1.40836]
+k-eff (implicit) = 1.31673 +/- 0.01169  [1.29382  1.33963]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   19 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.34416 +/- 0.03694  [1.27176  1.41657]
+k-eff (implicit) = 1.31863 +/- 0.01122  [1.29665  1.34062]
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Serpent 1.1.18 -- Criticality source simulation
+
+Title: "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+
+Active cycle   20 / 20 (100 source neutrons)
+
+Delta-tracking on: thresh = 0.90, eff = 0.41, frac = 0.79
+
+Running time:                  0:00:03
+Estimated running time:        -:--:--
+Estimated running time left:   -:--:--
+
+k-eff (analog)   = 1.34604 +/- 0.03510  [1.27725  1.41483]
+k-eff (implicit) = 1.32067 +/- 0.01084  [1.29944  1.34191]
+
+------------------------------------------------------------
+
+Finished after 20 active cycles of 100 source neutrons.
+Total calculation time 0.06 minutes.
+
+No errors or warning messages.
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 18:52:58 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 18:53:44 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 18:56:38 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 18:56:51 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:03:18 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:03:41 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:04:34 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:05:48 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:06:04 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:07:14 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:08:16 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:08:56 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:09:06 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:09:50 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:11:28 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:16:33 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:16:48 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:17:54 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Tue Jul 16 19:27:42 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests//testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Fri Jul 19 12:56:17 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/test_stom_runCalculation/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Fri Jul 19 13:01:23 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testSTOMrunCalculation/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Fri Jul 19 13:15:57 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testrunCalculation/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Fri Jul 19 13:16:37 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testrunCalculation/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Fri Jul 19 13:23:05 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/testrunCalculation/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Fri Jul 19 13:27:32 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/data_test_stom_runCalculation/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Fri Jul 19 13:28:42 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/data_test_stom_runCalculation/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Fri Jul 19 13:29:27 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/data_test_stom_runCalculation/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Fri Jul 19 13:30:05 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/data_test_stom_runCalculation/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Fri Jul 19 13:31:34 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/data_test_stom_runCalculation/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Fri Jul 19 13:32:37 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/data_test_stom_runCalculation/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
+
+  _                   .-=-.          .-==-.       
+ { }      __        .' O o '.       /  -<' )--<   
+ { }    .' O'.     / o .-. O \     /  .---`       
+ { }   / .-. o\   /O  /   \  o\   /O /            
+  \ `-` /   \ O`-'o  /     \  O`-`o /             
+   `-.-`     '.____.'       `.____.'              
+
+PSG2 / Serpent
+
+A Continuous-energy Monte Carlo Reactor Physics Burnup Calculation Code
+
+ - Version 1.1.18 (August 16, 2012) -- Contact: Jaakko.Leppanen@vtt.fi
+
+ - Parallel calculation mode not available
+
+ - Geometry and mesh plotting available
+
+ - Default data path not set
+
+Begin calculation on Fri Jul 19 13:43:35 2013
+
+Reading input file "/home/asikth/Documents/S2P/stop/tests/data_test_stom_runCalculation/testfuelpin2/fuelpin_1"...
+
+Processing geometry...
+OK.
+
+Plotting geometry...
+OK.
+
+Testing geometry by sampling 10000 random points...
+OK
+
