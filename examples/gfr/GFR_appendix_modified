@@ -4,13 +4,9 @@ set title "GFRMU-Hot Full Power"
 
 % --- Cross section library file path:
 
-%set acelib "/afs/psi.ch/project/.../Libraries/jeff31/sss_jeff31u.xsdata"
-%set declib "/afs/psi.ch/project/.../Libraries/endfb7/sss_endfb7.dec"
-%set nfylib "/afs/psi.ch/project/.../Libraries/endfb7/sss_endfb7.nfy"
-
-set acelib "/afs/psi.ch/project/fast_lrs/workspace/COD/SERP/xsdata/jeff31/sss_jeff31u.xsdata"
-set declib "/afs/psi.ch/project/fast_lrs/workspace/COD/SERP/xsdata/endfb7/sss_endfb7.dec"
-set nfylib "/afs/psi.ch/project/fast_lrs/workspace/COD/SERP/xsdata/endfb7/sss_endfb7.nfy"
+set acelib "sss_jeff31u.xsdata"
+set declib "sss_endfb7.dec"
+set nfylib "sss_endfb7.nfy"
 
 % --- Use of unresolved resonance data :
                                              
