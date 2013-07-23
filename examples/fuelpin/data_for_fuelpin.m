@@ -1,6 +1,6 @@
 clc;close all;
 
-TITLE = '"FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"';
+TITLE = '"FP    Sodium cooled pin cell with (U,Pu)O2 fuel"';
 
 HEXR = [0.60, 0.62, 0.63];
 FH =   [   0,   10,   20];

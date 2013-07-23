@@ -4,3 +4,7 @@
 *.seed
 *.png
 *.serplog
+*.out
+*_res.m
+*_det*.m
+

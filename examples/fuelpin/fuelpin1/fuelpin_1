@@ -2,7 +2,7 @@
 
 set acelib "/home/asikth/Documents/xsdata/jeff31/sss_jeff31.xsdata"
 
-set title "FPburn    Sodium cooled pin cell with (U,Pu)O2 fuel"
+set title "FP    Sodium cooled pin cell with (U,Pu)O2 fuel"
 % set title "Sodium cooled pin cell with (U,Pu)O2 fuel"
 
 set bc 3
