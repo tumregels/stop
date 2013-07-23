@@ -8,9 +8,10 @@ inpPar = [calc.inpPar];
 fullFileName = fullfile(genData.serpParInpDir, genData.serpParInpName);
 serpParInp = fileread(fullFileName);
 
-% make input
+% make input template
 [serpInput, serpInpLog] = stom.makeSerpInp(serpParInp, inpPar);
 
+% write input template to file
 staged.serpInput   = serpInput;
 staged.serpInpLog  = serpInpLog;
 staged.serpInpName = genData.serpParInpName;
@@ -21,10 +22,17 @@ staged.isTest      = genData.isTest;
 
 staged = stom.writeSerpFile(staged);
 
+% run calculations
 staged.serpCallCommand = genData.serpCallCommand;
 
 [simStatus staged] = stom.runCalculation(staged);
 
-% results = stom.readResults(staged)
+% extract data from res.m and det.m files
+staged.saveResPar = genData.saveResPar;
 
-% save results with append
+results = stom.getResults(staged);
+
+% save results
+saveResults(genData,inpPar, staged, results)
+
+
