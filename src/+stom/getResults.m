@@ -17,8 +17,12 @@ function resm = read_resm(serpRes, saveResPar)
 
 run(serpRes)
 
-for i = 1:length(saveResPar)
-    resm.(saveResPar{i}) = eval(saveResPar{i});
+[row col] = size(saveResPar);
+
+for i = 1:row
+    for j = 1:col
+        resm.(saveResPar{i,j}) = eval(saveResPar{i,j});
+    end
 end
 
 
