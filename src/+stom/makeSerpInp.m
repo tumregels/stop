@@ -13,8 +13,6 @@ function [serpInput serpInpLog] = makeSerpInp(serpParInp, inpPar)
 
     serpInpLog = [expression', equation', evalEquation'];
 
-end
-
 %==========================================================================
 
 function [uniqPar equation expression] = getSerpInpPar(serpParInp)
@@ -30,8 +28,6 @@ function [uniqPar equation expression] = getSerpInpPar(serpParInp)
     end
 
     uniqPar = unique(param);
-    
-end
 
 %==========================================================================
 
@@ -44,7 +40,5 @@ function evalEquation = evalSerpInpEquation(uniqPar, inpPar, equation)
     for i = 1:length(equation)
         evalEquation{i} = num2str(eval(equation{i}));
     end
-
-end
 
 

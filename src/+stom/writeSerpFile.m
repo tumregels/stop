@@ -23,8 +23,6 @@ staged.calcDir = calcDir;
 staged.serpInpFullName = serpInpFullName;
 staged.created = created;
 
-end
-
 %==========================================================================
 
 function writeFile(fullFileName, serpInput)
@@ -37,8 +35,6 @@ assert(count == length(serpInput));
 
 status = fclose(fid);
 assert(status == 0)
-
-end
 
 %==========================================================================
 

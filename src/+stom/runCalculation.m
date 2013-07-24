@@ -17,7 +17,7 @@ else
     end
 end
 
-end
+
 %==========================================================================
 function status = getSimComplStatus(fullFileName)
 
@@ -45,7 +45,7 @@ else
     status = 0; % file doesn't exist
 end
 
-end
+
 %==========================================================================
 function [simStatus staged] = runTestCalc(staged)
 
@@ -70,7 +70,7 @@ end
 
 staged.isSimComplete = simStatus;
 
-end
+
 %==========================================================================
 function [simStatus staged] = runCalc(staged)
 
@@ -97,4 +97,3 @@ end
 
 staged.isSimComplete = simStatus;
 
-end
