@@ -2,8 +2,10 @@
 
 2. modify getSimComplStatus(fullFileName) as separate function
 
-3. remove end -s from functions
+3. remove end -s from functions (done)
 
 4. add unique requirement for the list of saveResPar (done)
 
 5. check if cell exist saveResPar (done)
+
+6. address setSeed issue

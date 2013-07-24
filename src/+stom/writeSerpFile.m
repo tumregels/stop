@@ -45,6 +45,5 @@ function [calcDir serpInpName] = makeNames(serpInpName, calcNum, saveDir)
 calcDir = [saveDir filesep serpInpName num2str(calcNum)];
 serpInpName = [serpInpName '_' num2str(calcNum)];
 
-end
 
 
