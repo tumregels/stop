@@ -1,1 +1,9 @@
-list of default parameters: GC_UNI (must)
+1. list of default parameters for XSEC calculation: GC_UNI (must)
+
+2. modify getSimComplStatus(fullFileName) as separate function
+
+3. remove end -s from functions
+
+4. add unique requirement for the list of saveResPar (done)
+
+5. check if cell exist saveResPar (done)

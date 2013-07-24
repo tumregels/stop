@@ -12,19 +12,26 @@ detm = read_detm(detmDir);
 results.resm = resm;
 results.detm = detm;
 
+%==========================================================================
 
 function resm = read_resm(serpRes, saveResPar)
 
 run(serpRes)
 
+saveResPar = unique(saveResPar); % get unique cell array of parameters
+
 [row col] = size(saveResPar);
 
 for i = 1:row
     for j = 1:col
-        resm.(saveResPar{i,j}) = eval(saveResPar{i,j});
+        p = saveResPar{i,j};
+        if ~isempty(p)
+            resm.(p) = eval(p);
+        end
     end
 end
 
+%==========================================================================
 
 function detm = read_detm(serpDet)
 
@@ -36,6 +43,7 @@ for i = 1:length(saveDetPar)
     detm.(saveDetPar{i}) = eval(saveDetPar{i});
 end
 
+%==========================================================================
 
 function defaultRes = getDefaultResPar()
 
