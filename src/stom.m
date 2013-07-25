@@ -38,7 +38,6 @@ results = stom.getResults(staged);
 staged.saveResDir = fullfile(staged.saveDir,'Results');
 stom.saveResults(results, staged.saveResDir, staged.serpInpName);
 
-
 % save all results
 calc.results = results;
 calc.staged = staged;

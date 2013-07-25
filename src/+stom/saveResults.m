@@ -1,6 +1,6 @@
 function saveResults(data, saveDir, name)
 
-resultsDir = fullfile(saveDir,'FullResults');
+resultsDir = fullfile(saveDir);
 
 if(~exist(resultsDir, 'dir'))
     mkdir(resultsDir);
