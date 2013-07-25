@@ -9,3 +9,9 @@
 5. check if cell exist saveResPar (done)
 
 6. address setSeed issue
+
+7. checkCalcStatus function, put it separately
+
+8. check what means isLog ? in data_for_fuelpin.m
+
+9. simStatus, add 0,1,2

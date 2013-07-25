@@ -26,8 +26,6 @@ genData.saveResPar = {...
 
 genData.isTest  = false;
 genData.isLog = false;
-genData.isExtract = false;
-genData.isBurnup = false;
 genData.isContinue = false;
 
 for n = 1:length(HEXR)
@@ -44,6 +42,6 @@ for n = 1:length(HEXR)
 end
 
 addpath(genpath(genData.stopDir))
-stom(calc(1));
+[results, ~] = stom(calc(1));
 
 
