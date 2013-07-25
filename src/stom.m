@@ -1,4 +1,4 @@
-function stom(calc)
+function results = stom(calc)
 
 % vectorize the access to elements in a structure array
 genData = [calc.genData];
@@ -28,11 +28,18 @@ staged.serpCallCommand = genData.serpCallCommand;
 [simStatus staged] = stom.runCalculation(staged);
 
 % extract data from res.m and det.m files
+
 staged.saveResPar = genData.saveResPar;
+staged.inpPar = inpPar;
 
 results = stom.getResults(staged);
+stom.saveResultsOnly(results);
 
-% save results
-saveResults(genData,inpPar, staged, results)
+% save all calc data
+
+calc.staged = staged;
+calc.results = results;
+
+stom.saveFullCalc(calc);
 
 

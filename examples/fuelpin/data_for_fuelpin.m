@@ -30,18 +30,17 @@ genData.isExtract = false;
 genData.isBurnup = false;
 genData.isContinue = false;
 
-inpPar.HEXR = 0;
-inpPar.FH = 0;
-inpPar.FDC = 0;
-inpPar.TITLE = TITLE;
-
 for n = 1:length(HEXR)
+    
     calc(n).genData = genData;
     calc(n).genData.calcNum = n;
+    
     calc(n).inpPar.HEXR = HEXR(n);
     calc(n).inpPar.FH = FH(n);
     calc(n).inpPar.FDC = FDC(n);
     calc(n).inpPar.VG = VG(n);
+    calc(n).inpPar.TITLE = TITLE;
+    
 end
 
 addpath(genpath(genData.stopDir))

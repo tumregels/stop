@@ -1,8 +1,9 @@
 function results = getResults(staged)
 
-resmDir = [ staged.serpInpFullName '_res' ];
+serpInpFullName = staged.serpInpFullName;
 
-detmDir = [ staged.serpInpFullName '_det0' ];
+resmDir = [ serpInpFullName '_res' ];
+detmDir = [ serpInpFullName '_det0' ];
 
 saveResPar = [staged.saveResPar; getDefaultResPar];
 
@@ -11,6 +12,8 @@ detm = read_detm(detmDir);
 
 results.resm = resm;
 results.detm = detm;
+results.serpInput = staged.serpInput;
+results.inpPar = staged.inpPar;
 
 %==========================================================================
 
