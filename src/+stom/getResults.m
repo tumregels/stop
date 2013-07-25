@@ -1,4 +1,4 @@
-function results = getResultsAndSave(staged)
+function results = getResults(staged)
 
 serpInpFullName = staged.serpInpFullName;
 
@@ -15,8 +15,6 @@ results.detm = detm;
 results.serpInput = staged.serpInput;
 results.inpPar = staged.inpPar;
 results.serpInpName = staged.serpInpName;
-
-saveResults(results, staged.saveDir)
 
 %==========================================================================
 
@@ -48,21 +46,6 @@ saveDetPar = who('DET*');
 for i = 1:length(saveDetPar)
     detm.(saveDetPar{i}) = eval(saveDetPar{i});
 end
-
-%==========================================================================
-
-function saveResults(results, saveDir)
-
-resultsDir = fullfile(saveDir,'Results');
-
-if(~exist(resultsDir, 'dir'))
-    mkdir(resultsDir);
-end
-
-var = genvarname(results.serpInpName);
-eval([var '= results']);
-save([resultsDir filesep var]);
-
 
 %==========================================================================
 

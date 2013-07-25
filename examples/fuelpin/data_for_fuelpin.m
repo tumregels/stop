@@ -1,4 +1,5 @@
 clc;close all;
+clear all;
 
 TITLE = '"FP    Sodium cooled pin cell with (U,Pu)O2 fuel"';
 
@@ -42,6 +43,11 @@ for n = 1:length(HEXR)
 end
 
 addpath(genpath(genData.stopDir))
-[results, ~] = stom(calc(1));
+
+for n = 1:length(HEXR)
+
+[results(n), ~] = stom(calc(n));
+
+end
 
 
