@@ -1,17 +1,11 @@
-1. list of default parameters for XSEC calculation: GC_UNI (must)
+1. check XSEC list
 
 2. modify getSimComplStatus(fullFileName) as separate function
 
-3. remove end -s from functions (done)
+3. checkCalcStatus function, put it separately
 
-4. add unique requirement for the list of saveResPar (done)
+4. simStatus, add 0,1,2
 
-5. check if cell exist saveResPar (done)
+5. modify saveResults function
 
-6. address setSeed issue
-
-7. checkCalcStatus function, put it separately
-
-8. check what means isLog ? in data_for_fuelpin.m
-
-9. simStatus, add 0,1,2
+6. "Warning: Directory already exists" add if exist statement

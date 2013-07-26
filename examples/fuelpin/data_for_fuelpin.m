@@ -10,12 +10,9 @@ genData.serpParInpName = [name ext];
 genData.stopDir = '/home/asikth/Documents/S2P/stop/';
 genData.saveDir = genData.serpParInpDir;
 
-genData.saveResPar = {...
-    'CHI';'CHID';
-    };
+genData.saveResPar = {'ANA_KEFF';'IMP_KEFF'};
 
 genData.isTest  = false;
-genData.isLog = false;
 genData.isContinue = false;
 
 % list of parameters to be used during simulation
