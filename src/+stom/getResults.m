@@ -5,7 +5,7 @@ serpInpFullName = staged.serpInpFullName;
 resmDir = [ serpInpFullName '_res' ];
 detmDir = [ serpInpFullName '_det0' ];
 
-saveResPar = [staged.saveResPar; getDefaultResPar];
+saveResPar = unique([staged.saveResPar; getDefaultResPar]);
 
 resm = read_resm(resmDir, saveResPar);
 detm = read_detm(detmDir);
@@ -21,8 +21,6 @@ results.serpInpName = staged.serpInpName;
 function resm = read_resm(serpRes, saveResPar)
 
 run(serpRes)
-
-saveResPar = unique(saveResPar); % get unique cell array of parameters
 
 [row col] = size(saveResPar);
 
@@ -51,8 +49,25 @@ end
 
 function defaultRes = getDefaultResPar()
 
+% return list of parameters necessary to create XSEC card
+
 defaultRes = {...
-    'GC_UNI';...
-    'GC_NE';...
+    'ADFS';
+    'ADFC';
+    'BETA_EFF';
+    'BETA_ZERO';
+    'CHI';
+    'CHID';
+    'DECAY_CONSTANT';
+    'FISSXS';
+    'FISSE';
+    'GC_UNI';
+    'GC_NE';
+    'GPRODXS';
+    'NSF';
+    'P1_TRANSPXS';
+    'PRECURSOR_GROUPS';
+    'RABSXS';
+    'RECIPVEL';
     };
 

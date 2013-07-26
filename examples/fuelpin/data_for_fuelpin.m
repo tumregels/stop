@@ -1,13 +1,6 @@
 clc;close all;
 clear all;
 
-TITLE = '"FP    Sodium cooled pin cell with (U,Pu)O2 fuel"';
-
-HEXR = [0.60, 0.62, 0.63];
-FH =   [   0,   10,   20];
-FDC =  [ 1.0,  1.1,  1.2];
-VG =   [0.01,0.015, 0.02];
-
 [path, name, ext] = fileparts(...
     '/home/asikth/Documents/S2P/stop/examples/fuelpin/fuelpin.spi');
 
@@ -18,16 +11,23 @@ genData.stopDir = '/home/asikth/Documents/S2P/stop/';
 genData.saveDir = genData.serpParInpDir;
 
 genData.saveResPar = {...
-    'CHI';'CHID';'BETA_EFF';'P1_TRANSPXS';'RABSXS';'NSF';...
-    'FISSXS';'FISSE';...
-    'GPRODXS';'RECIPVEL';...
-    'ADFS';'ADFC';...
-    'PRECURSOR_GROUPS';'BETA_EFF';'BETA_ZERO';'DECAY_CONSTANT'...
+    'CHI';'CHID';
     };
 
 genData.isTest  = false;
 genData.isLog = false;
 genData.isContinue = false;
+
+% list of parameters to be used during simulation
+
+TITLE = '"FP    Sodium cooled pin cell with (U,Pu)O2 fuel"';
+
+HEXR = [0.60, 0.62, 0.63];
+FH =   [   0,   10,   20];
+FDC =  [ 1.0,  1.1,  1.2];
+VG =   [0.01,0.015, 0.02];
+
+% prepare data structure for 'stop' wrapper
 
 for n = 1:length(HEXR)
     
@@ -42,12 +42,16 @@ for n = 1:length(HEXR)
     
 end
 
+% add all folders of the stop wrapper to matlab search path
+
 addpath(genpath(genData.stopDir))
 
+% perform simulation
+
 for n = 1:length(HEXR)
-
-[results(n), ~] = stom(calc(n));
-
+    
+    [results(n), ~] = stom(calc(n));
+    
 end
 
 

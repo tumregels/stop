@@ -7,4 +7,4 @@
 *.out
 *_res.m
 *_det*.m
-
+examples/fuelpin/*

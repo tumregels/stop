@@ -17,8 +17,8 @@ else
     end
 end
 
-
 %==========================================================================
+
 function status = getSimComplStatus(fullFileName)
 
 resFile = [fullFileName '_res.m'];
@@ -45,8 +45,8 @@ else
     status = 0; % file doesn't exist
 end
 
-
 %==========================================================================
+
 function [simStatus staged] = runTestCalc(staged)
 
 input = staged.serpInpFullName;
@@ -70,8 +70,8 @@ end
 
 staged.isSimComplete = simStatus;
 
-
 %==========================================================================
+
 function [simStatus staged] = runCalc(staged)
 
 input = staged.serpInpFullName;
