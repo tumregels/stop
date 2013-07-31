@@ -2,6 +2,16 @@ function results = getResults(staged)
 
 serpInpFullName = staged.serpInpFullName;
 
+simStatus = stom.getSimComplStatus(serpInpFullName);
+
+if simStatus == 0
+    warning('MATLAB:simIncomplete',...
+        'Simulation "%s_res.m" is not complete', serpInpFullName )
+elseif simStatus == -1
+    error('MATLAB:no_resmFile',...
+        'Simulation "%s_res.m" does not exist', serpInpFullName )
+end
+
 resmDir = [ serpInpFullName '_res' ];
 detmDir = [ serpInpFullName '_det0' ];
 

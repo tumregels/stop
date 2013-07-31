@@ -2,12 +2,15 @@ function [simStatus staged] = runCalculation(staged)
 
 fullFileName = staged.serpInpFullName;
 
-isSimComplete = getSimComplStatus(fullFileName);
+isSimComplete = stom.getSimComplStatus(fullFileName);
 
-if isSimComplete
-    staged.simResults = 'Calculation exists and is complete';
+if isSimComplete == true
+    staged.simResults = 'Simulation exists and is complete';
     staged.isSimComplete = true;
     simStatus = true;
+    
+    warning('MATLAB:simExist',...
+        'Simulation "%s" exists and is complete', [fullFileName '_res.m'])
     return
 else
     if staged.isTest
@@ -19,40 +22,11 @@ end
 
 %==========================================================================
 
-function status = getSimComplStatus(fullFileName)
-
-resFile = [fullFileName '_res.m'];
-
-if exist(resFile,'file')==2
-    
-    fid=fopen(resFile);
-    assert(fid >= 3,['Could not open file: ' resFile])
-    
-    counter=1;
-    while counter < 200
-        line = fgetl(fid);
-        expr = 'SIMULATION_COMPLETED.*=\s*(?<tf>[01])';
-        [names match] = regexp(line,expr,'names','match');
-        
-        if ~cellfun(@isempty, match);
-            status = str2num(names.tf);
-            break
-        end
-        counter=counter+1;
-    end
-    
-else
-    status = 0; % file doesn't exist
-end
-
-%==========================================================================
-
 function [simStatus staged] = runTestCalc(staged)
 
 input = staged.serpInpFullName;
 assert(exist(input,'file')==2,'MATLAB:assert:failed','File %s not found.', input)
 
-% command = [staged.serpCallCommand ' ' input ' -testgeom 10000 -plot ;' ];
 command = [staged.serpCallCommand ' ' input ' -testgeom 10000 -plot '...
     ' 2>&1 | tee -a ' input '.serplog ;'];
 
@@ -79,7 +53,6 @@ input = staged.serpInpFullName;
 assert(exist(input,'file')==2, 'MATLAB:assert:failed',...
     'File %s not found.', input)
 
-% command = [staged.serpCallCommand ' ' input ' >' input '.serplog' ];
 command = [staged.serpCallCommand ' ' input ...
     ' 2>&1 | tee -a ' input '.serplog ; ( exit ${PIPESTATUS} )'];
 

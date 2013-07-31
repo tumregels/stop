@@ -26,7 +26,7 @@ staged.serpInpFullName = ...
     [staged.testdatafullpath filesep 'testfuelpin1/fuelpin_1'];
 [simStatus, staged] = stom.runCalculation(staged);
 
-assertEqual(staged.simResults,'Calculation exists and is complete')
+assertEqual(staged.simResults,'Simulation exists and is complete')
 assert(simStatus == 1)
 
 end

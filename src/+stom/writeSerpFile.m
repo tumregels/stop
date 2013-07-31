@@ -13,7 +13,9 @@ serpInpFullName = fullfile(calcDir, serpInpName);
 if exist(serpInpFullName, 'file') == 2 && isContinue
     created = false;
 else
-    mkdir(calcDir)
+    if(~exist(calcDir, 'dir')) % make dir if it doesn't exist
+        mkdir(calcDir);
+    end
     writeFile(serpInpFullName, serpInput)
     created = true;
 end
