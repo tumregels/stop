@@ -11,11 +11,15 @@ if exist(resFile,'file')==2
         
         status = getStatus(resFile);
         
-        if status == 1
+        if status == 1 % simulation ready
             break
-        else
-            pause(12)
+        elseif status == 0 % not ready
+            % pause(12)
             ts = ts + 1;
+        elseif status == -2
+            error('STOM:noExprSIMULATION_COMPLETED',...
+                ['Counldn''t find string: SIMULATION_COMPLETED \n'
+                ' inside "%s_res.m" file'], serpInpFullName )
         end
         
     end
@@ -38,7 +42,13 @@ while counter < nlines
     
     line = fgetl(fid);
     expr = 'SIMULATION_COMPLETED.*=\s*(?<tf>[01])';
-    [names match] = regexp(line,expr,'names','match');
+    try
+        [names match] = regexp(line,expr,'names','match');
+    catch exception
+        if strcmp(exception.identifier, 'MATLAB:UndefinedFunction')
+            break
+        end
+    end
     
     if ~cellfun(@isempty, match);
         status = logical(str2double(names.tf));
@@ -50,3 +60,8 @@ while counter < nlines
 end
 
 fclose(fid);
+
+if ~exist('status','var')
+    status = -2; % SIMULATION_COMPLETED string not found
+end
+

@@ -14,3 +14,4 @@
 
 3. comment the function getSimComplStatus
 
+4. add test_data folders and their content, modify .gitignore
