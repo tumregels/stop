@@ -1,8 +1,11 @@
 function test_suite = test_stom_runCalculation
+
 initTestSuite;
-end
+
+%==========================================================================
 
 function staged = setup
+% setup data path for test
 
 fullpath = mfilename('fullpath');
 [path name ext ] = fileparts(fullpath);
@@ -10,16 +13,17 @@ testdatafullpath = fullfile(path, ['data_' name]);
 load([testdatafullpath filesep 'test_data_staged'])
 staged.testdatafullpath = testdatafullpath;
 
-end
+%==========================================================================
 
 function teardown(staged)
+% delete data
 
-%delete([staged.serpInpFullName '_res.m'])
 clearvars staged;
 
-end
+%==========================================================================
 
 function test_runTestCalcExist(staged)
+% test for SIMULATION exists and is complete
 
 staged.isTest = 0;
 staged.serpInpFullName = ...
@@ -29,35 +33,38 @@ staged.serpInpFullName = ...
 assertEqual(staged.simResults,'Simulation exists and is complete')
 assert(simStatus == 1)
 
-end
+%==========================================================================
 
 function test_runTestCalcIsTest(staged)
+% test for genData.isTest = true;
 
 staged.isTest = 1;
 staged.serpInpFullName = ...
     [staged.testdatafullpath filesep 'testfuelpin2/fuelpin_1'];
-% delete([staged.serpInpFullName '_res.m'])
+
 [simStatus, staged] = stom.runCalculation(staged);
 
 assert(simStatus == 1)
 
-end
+%==========================================================================
 
 function test_runTestCalcInpError(staged)
+% test for wrong serpent input when genData.isTest = true;
 
 staged.isTest = 1;
 staged.serpInpFullName = ...
     [staged.testdatafullpath filesep 'testfuelpin3/fuelpin_1'];
-% delete([staged.serpInpFullName '_res.m'])
+
 [simStatus, staged] = stom.runCalculation(staged);
 
 assert(simStatus == 0)
 assert(isempty(strfind(...
     staged.simError,'error in parameter "pin" on line 19'))==0)
 
-end
+%==========================================================================
 
 function test_runCalcNoInput(staged)
+% test for absence of serpent input when genData.isTest = false;
 
 staged.isTest = 0;
 staged.serpInpFullName = ...
@@ -65,9 +72,10 @@ staged.serpInpFullName = ...
 f = @() stom.runCalculation(staged);
 assertExceptionThrown(f ,'MATLAB:assert:failed')
 
-end
+%==========================================================================
 
 function test_runCalcInpError(staged)
+% test for wrong serpent input when genData.isTest = false;
 
 staged.isTest = 0;
 staged.serpInpFullName = ...
@@ -78,4 +86,4 @@ assert(simStatus == 0)
 assert(isempty(strfind(...
     staged.simError,'error in parameter "pin" on line 19'))==0)
 
-end
+

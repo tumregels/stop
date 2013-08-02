@@ -38,17 +38,11 @@ assert(fid >= 3,['Could not open file: ' fileName])
 counter = 1;
 nlines = 100; % number of lines to check inside file
 
-while counter < nlines
+while counter < nlines && ~feof(fid)
     
     line = fgetl(fid);
     expr = 'SIMULATION_COMPLETED.*=\s*(?<tf>[01])';
-    try
-        [names match] = regexp(line,expr,'names','match');
-    catch exception
-        if strcmp(exception.identifier, 'MATLAB:UndefinedFunction')
-            break
-        end
-    end
+    [names match] = regexp(line,expr,'names','match');
     
     if ~cellfun(@isempty, match);
         status = logical(str2double(names.tf));
