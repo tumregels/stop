@@ -8,9 +8,9 @@
 
 
 
-1. modify saveResults function
+1. modify saveResults function (check again, smth wrong)
 
-2. check XSEC list
+2. add RSTD to the plus minus rdivide and times of xsec
 
 3. comment the function getSimComplStatus
 

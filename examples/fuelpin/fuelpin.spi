@@ -11,6 +11,9 @@ set pop 1000 50 20
 
 set gcu      0 1 2 3
 
+set nfg 4 0.625E-6 5.5E-3 0.821
+
+
 plot 3 500 500
 % plot 1 500 500
 
