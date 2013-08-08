@@ -1,4 +1,4 @@
-classdef xsec %< handle
+classdef dataOptimizer %< handle
     
     properties
         GC_NE;
@@ -16,7 +16,7 @@ classdef xsec %< handle
     methods
         % methods, including the constructor
         
-        function self = xsec(data)
+        function self = dataOptimizer(data)
             % class constructor
             
             if(nargin == 1)
