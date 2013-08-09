@@ -1,21 +1,90 @@
-function str = data2xsec(data, gc_uni)
+function string = data2xsec(varargin)
 
-P1_TRANSPXS = data.P1_TRANSPXS(gc_uni,:)';
-RABSXS  =  data.RABSXS(gc_uni,:)';
-NSF  =  data.NSF(gc_uni,:)';
-KFISS  =  data.KFISS(gc_uni,:)';
-GPRODXS = data.GPRODXS(gc_uni,:);
-CHI = data.CHI(gc_uni,:);
-GC_NE = data.GC_NE;
+string = '';
 
-base = [P1_TRANSPXS, RABSXS, NSF, KFISS];
+if nargin < 1
+    error('Not enough input arguments.');
+else
+    k = 1;
+    while k <= numel(varargin)
+        arg = varargin{k};
+        if ~isempty(arg) && (arg(1) == '-')
+            switch arg
+                case '-base_macro'
+                    data = varargin{k+1};
+                    universe_number = varargin{k+2};
+                    k = k + 2;
+                    
+                    uni_data = getData(data,universe_number);
+                    
+                    str1 = createBase( arg(2:end), uni_data.base);
+                    str2 = scatMatrix(uni_data.GPRODXS,...
+                        uni_data.GC_NE);
+                    str3 = fiss_spec(uni_data.CHI);
+                    
+                    string = [string, str1, str2, str3];
+                    
+                case '-comp_num'
+                    universe_number = varargin{k+1};
+                    k = k + 1;
+                    
+                    str = comp_num(universe_number);
+                    string = [string, str];
+                    
+                case '-delcr_comp'
+                    universe_number = varargin{k+1};
+                    k = k + 1;
+                    
+                    str = delcr_comp(universe_number);
+                    string = [string, str];                 
+                    
+                case {'-delcr_base','-dxs_dtf',...
+                        '-dxs_axexp','-dxs_radexp','-dxs_ddm'}
+                    
+                    data = varargin{k+1};
+                    universe_number = varargin{k+2};
+                    k = k + 2;
+                    
+                    uni_data = getData(data,universe_number);
+                    
+                    str1 = createBase( arg(2:end), uni_data.base);
+                    str2 = scatMatrix(uni_data.GPRODXS,...
+                        uni_data.GC_NE);
+                    
+                    string = [string, str1, str2];
+                    
+                otherwise
+                    error('Unrecognized function name %s',arg)
+                    
+            end
+        else
+            error(['Wrong input %s.\n'...
+                'First parameter always starts with "-" sign'],arg)
+        end
+        k = k + 1;
+    end
+end
 
-str = comp_num(gc_uni);
+%==========================================================================
 
+function uni_data = getData(data, gc_uni)
 
-%a{2} = sprintf('%s%s%s%s%s',BASE_MACRO,DXS_DTF,DXS_AXEXP,DXS_RADEXP,DXS_DDM);
+ind = find(data.GC_UNI == gc_uni);
 
-%str = sprintf('%s%s%s%s',a,b,c);
+uni_data.P1_TRANSPXS = data.P1_TRANSPXS(ind,:)';
+uni_data.RABSXS  =  data.RABSXS(ind,:)';
+uni_data.NSF  =  data.NSF(ind,:)';
+uni_data.KFISS  =  data.KFISS(ind,:)';
+uni_data.GPRODXS = data.GPRODXS(ind,:);
+uni_data.CHI = data.CHI(ind,:);
+uni_data.GC_NE = data.GC_NE;
+
+uni_data.base = [...
+    uni_data.P1_TRANSPXS,...
+    uni_data.RABSXS,...
+    uni_data.NSF,...
+    uni_data.KFISS...
+    ];
 
 %==========================================================================
 
@@ -32,23 +101,23 @@ function str = delcr_comp(gc_uni)
 
 % create delcr_comp string using gc_uni universe number
 
-a = sprintf(' delcr_comp    !%d %d -%d    !UNIVERSE %d %d\n',...
-    gc_uni(2)*ones(1,3),gc_uni(1),gc_uni(1)); 
-
-% TODO: adjust the dataOptimizer object
+str = sprintf(' delcr_comp     !%d %d -%d    !UNIVERSE %d %d\n',...
+    gc_uni(1)*ones(1,3),gc_uni(1),gc_uni(1)); 
 
 %==========================================================================
 
-function str = base_macro(base)
+function str = createBase(baseName, base)
 
-% create base_macro string using base.
+% create (e.g. base_macro block) string using base.
 % base is a matrix with dimensions of (GC_NE,4) and
 % contains P1_TRANSPXS, RABSXS, NSF, KFISS
 
 [row, col] = size(base);
 
+name = sprintf([' ' baseName repmat(' ',1,12-length(baseName))]);
+
 a{1} = sprintf(...
-    [' base_macro  ' repmat('%16.6E',1,col) '\n'],...
+    [name repmat('%16.6E',1,col) '\n'],...
     base(1,:));
 
 for j = 2:row
@@ -60,26 +129,6 @@ for j = 2:row
 end
 
 str = sprintf('%s',a{:});
-
-%==========================================================================
-
-function str = delcr_base(base)
-
-% create delcr_base string using base
-
-[row, col] = size(base);
-
-b{1} = sprintf([' delcr_base ' repmat('%16.6E',1,col) '\n'],...
-    base(1,:));
-
-for j = 2:row
-    
-    b{j} = sprintf(['            '...
-        repmat('%16.6E',1,length(A)) '\n'],base(j,:));
-    
-end
-
-str = sprintf('%s',b{:});
 
 %==========================================================================
 
@@ -108,4 +157,4 @@ function str = fiss_spec(CHI)
 % create fiss_spec string using CHI
 
 str = sprintf(...
-    [' fiss_spec ' repmat('%16.6E',1,length(self.CHI)) '\n'],CHI);
+    [' fiss_spec   ' repmat('%16.6E',1,length(CHI)) '\n'],CHI);
