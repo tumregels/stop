@@ -14,12 +14,12 @@ if exist(resFile,'file')==2
         if status == 1 % simulation ready
             break
         elseif status == 0 % not ready
-            % pause(12)
+            pause(2)
             ts = ts + 1;
         elseif status == -2
-            error('STOM:noExprSIMULATION_COMPLETED',...
-                ['Counldn''t find string: SIMULATION_COMPLETED \n'
-                ' inside "%s_res.m" file'], serpInpFullName )
+            error('stom:noExpressionSIMULATION_COMPLETED',...
+                ['Counldn''t find string: SIMULATION_COMPLETED \n',...
+                 'inside "%s_res.m" file'], resFile )
         end
         
     end

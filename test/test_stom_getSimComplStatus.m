@@ -45,4 +45,4 @@ function test_noSimComplExpression(testpath)
 
 path = fullfile(testpath, 'test_3');
 f = @() stom.getSimComplStatus(path);
-assertExceptionThrown(f ,'MATLAB:catenate:dimensionMismatch')
+assertExceptionThrown(f ,'stom:noExpressionSIMULATION_COMPLETED')
