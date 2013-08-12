@@ -1,14 +1,12 @@
 TOP PRIORITY
 
-1. modify saveResults function (check again, smth wrong)
+1. add SFR input and test it
 
-2. add SFR input and test it
+2. '-delcr_base' check for SFR
 
-3. '-delcr_base' check for SFR
+3. add README.md
 
-4. add README.md
-
-5. modify KFISS in dataOptimizer.m (add set and get methods)
+4. modify KFISS in dataOptimizer.m (add set and get methods)
 
 ==========================================================
 
@@ -17,5 +15,3 @@ TOP PRIORITY
 2. comment the function getSimComplStatus
 
 3. add test_data folders and their content i.e modify .gitignore
-
-4. change license.txt to LICENSE
