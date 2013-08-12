@@ -15,3 +15,5 @@ TOP PRIORITY
 2. comment the function getSimComplStatus
 
 3. add test_data folders and their content i.e modify .gitignore
+
+4. write mdivide function error

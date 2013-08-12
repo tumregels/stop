@@ -22,7 +22,7 @@ function [uniqPar equation expression] = getSerpInpPar(serpParInp)
 
     [equation{1:length(match)}] = match.equation;
 
-    exp = '[A-Z]+';
+    exp = '[A-Z]\w+';
     for i = 1:length(match)
         param(i) = regexp(equation{i}, exp,'match');
     end
