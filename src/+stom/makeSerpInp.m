@@ -38,7 +38,12 @@ function evalEquation = evalSerpInpEquation(uniqPar, inpPar, equation)
     end
 
     for i = 1:length(equation)
-        evalEquation{i} = num2str(eval(equation{i}));
+        value = eval(equation{i});
+        if iscell(value)
+            evalEquation{i} = num2str(value{1});
+        else
+            evalEquation{i} = num2str(value);
+        end
     end
 
 
