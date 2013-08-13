@@ -7,5 +7,6 @@
 *.out
 *_res.m
 *_det*.m
-examples/fuelpin/*
-/examples/esfr/*
+/examples/fuelpin/*
+/examples/ESFR/*
+/examples/ELECTRA/*

@@ -8,6 +8,10 @@ TOP PRIORITY
 
 4. modify KFISS in dataOptimizer.m (add set and get methods)
 
+5. add inpPar structte to the results structure and modify dataOptimizer.
+
+6. write bash script generator
+
 ==========================================================
 
 1. add RSTD to the plus minus rdivide and times of xsec
