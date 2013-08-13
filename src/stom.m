@@ -32,18 +32,23 @@ staged.serpCallCommand = genData.serpCallCommand;
 staged.saveResPar = genData.saveResPar;
 staged.inpPar = inpPar;
 
-results = stom.getResults(staged);
-
-% save results
-staged.saveResDir = fullfile(staged.saveDir,'Results');
-stom.saveResults(results, staged.saveResDir, staged.serpInpName);
-
-% save all results
-calc.results = results;
-calc.staged = staged;
-
-staged.saveFullResDir = fullfile(staged.saveDir,'FullResults');
-stom.saveResults(calc, staged.saveFullResDir, staged.serpInpName);
+if staged.isTest == false
+    results = stom.getResults(staged);
+    
+    % save results
+    staged.saveResDir = fullfile(staged.saveDir,'Results');
+    stom.saveResults(results, staged.saveResDir, staged.serpInpName);
+    
+    % save all results
+    calc.results = results;
+    calc.staged = staged;
+    
+    staged.saveFullResDir = fullfile(staged.saveDir,'FullResults');
+    stom.saveResults(calc, staged.saveFullResDir, staged.serpInpName);
+else
+    results = NaN;
+    calc = NaN;
+end
 
 
 

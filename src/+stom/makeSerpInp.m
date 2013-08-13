@@ -22,7 +22,7 @@ function [uniqPar equation expression] = getSerpInpPar(serpParInp)
 
     [equation{1:length(match)}] = match.equation;
 
-    exp = '[A-Z]+';
+    exp = '[A-Z]\w+';
     for i = 1:length(match)
         param(i) = regexp(equation{i}, exp,'match');
     end
@@ -38,7 +38,12 @@ function evalEquation = evalSerpInpEquation(uniqPar, inpPar, equation)
     end
 
     for i = 1:length(equation)
-        evalEquation{i} = num2str(eval(equation{i}));
+        value = eval(equation{i});
+        if iscell(value)
+            evalEquation{i} = num2str(value{1});
+        else
+            evalEquation{i} = num2str(value);
+        end
     end
 
 

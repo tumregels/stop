@@ -1,17 +1,19 @@
-4. modify getSimComplStatus(fullFileName) as separate function (done)
+TOP PRIORITY
 
-5. getSimComplStatus function, put it separately (done)
+1. add SFR input and test it
 
-6. getSimComplStatus, add 0,1,-1 (done)
+2. '-delcr_base' check for SFR
 
-7. "Warning: Directory already exists" add if exist statement (done)
+3. add README.md
 
+4. modify KFISS in dataOptimizer.m (add set and get methods)
 
+==========================================================
 
-1. modify saveResults function (check again, smth wrong)
+1. add RSTD to the plus minus rdivide and times of xsec
 
-2. add RSTD to the plus minus rdivide and times of xsec
+2. comment the function getSimComplStatus
 
-3. comment the function getSimComplStatus
+3. add test_data folders and their content i.e modify .gitignore
 
-4. add test_data folders and their content, modify .gitignore
+4. write mdivide function error

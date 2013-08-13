@@ -68,6 +68,7 @@ else
     ind = strfind(results,' error ');
     staged.simError = results(ind(1):end);
     simStatus = false;
+    warning(staged.simError)
 end
 
 staged.isSimComplete = simStatus;
