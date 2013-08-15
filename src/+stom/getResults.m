@@ -12,13 +12,18 @@ elseif simStatus == -1
         'Simulation "%s_res.m" does not exist', serpInpFullName )
 end
 
-resmDir = [ serpInpFullName '_res' ];
-detmDir = [ serpInpFullName '_det0' ];
+resmFileName = [ serpInpFullName '_res.m' ];
+detmFileName = [ serpInpFullName '_det0.m' ];
 
 saveResPar = unique([staged.saveResPar; getDefaultResPar]);
 
-resm = read_resm(resmDir, saveResPar);
-detm = read_detm(detmDir);
+resm = read_resm(resmFileName, saveResPar);
+
+if exist(detmFileName,'file')==2
+    detm = read_detm(detmFileName);
+else
+    detm = [];
+end
 
 results.resm = resm;
 results.detm = detm;
@@ -28,9 +33,10 @@ results.serpInpName = staged.serpInpName;
 
 %==========================================================================
 
-function resm = read_resm(serpRes, saveResPar)
+function resm = read_resm(serpResFile, saveResPar)
 
-run(serpRes)
+[pathstr, name, ~] = fileparts(serpResFile);
+run([pathstr filesep name])
 
 [row col] = size(saveResPar);
 
@@ -47,7 +53,8 @@ end
 
 function detm = read_detm(serpDet)
 
-run(serpDet)
+[pathstr, name, ~] = fileparts(serpDet);
+run([pathstr filesep name])
 
 saveDetPar = who('DET*');
 
