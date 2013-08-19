@@ -13,7 +13,7 @@ set bc 3
 
 set pop 50 10 10
 
-set gcu      0 1 2
+set gcu  0 1 2
 
 % plot 3 500 500
 % plot 1 500 500
@@ -79,7 +79,148 @@ mat clad  -7.84     % Steel cladding density
 mat sodium -0.86
 11023.09c   1.0
 
-% Cross section materials
+
+
+% --- Cut-offs:
+
+set fpcut   1E-6
+set stabcut 1E-12
+
+% --- Options for burnup calculation:
+
+set bumode  2  % CRAM method
+set pcc     1  % Predictor-corrector calculation on
+set xscalc  2  % Cross sections from spectrum
+
+% --- XS grid thinning (to reduce memory requirement)
+
+set egrid 5E-3 1E-9 15.0 
+
+% --- Irradiation cycle:
+
+set powdens 40.0E-3
+
+dep butot
+
+    0.10000
+    0.50000
+    1.00000
+    1.50000
+    2.00000
+    2.50000
+    3.00000
+    3.50000
+    4.00000
+    4.50000
+    5.00000
+    5.50000
+    6.00000
+    6.50000
+    7.00000
+    7.50000
+    8.00000
+    8.50000
+    9.00000
+    9.50000
+   10.00000
+   10.50000
+   11.00000
+   11.50000
+   12.00000
+   12.50000
+   13.00000
+   13.50000
+   14.00000
+   14.50000
+   15.00000
+   17.50000
+   20.00000
+   22.50000
+   25.00000
+   27.50000
+   30.00000
+   32.50000
+   35.00000
+   37.50000
+   40.00000
+
+% --- Nuclide inventory:
+
+set inventory
+
+ 922340
+ 922350
+ 922360
+ 922370
+ 922380
+ 922390
+ 932360
+ 932370
+ 932380
+ 932390
+ 942360
+ 942380
+ 942390
+ 942400
+ 942410
+ 942420
+ 942430
+ 952410                                       
+ 952420
+ 952430
+ 952440
+ 952421
+ 962420
+ 962430
+ 962440
+ 962450
+ 962460
+ 962470
+ 962480
+ 962490
+ 972490
+ 972500
+ 982490
+ 982500
+ 982510
+ 982520
+ 360830
+ 451030
+ 451050
+ 471090
+ 531350
+ 541310
+ 541350
+ 551330
+ 551340
+ 551350
+ 551370
+ 561400
+ 571400
+ 601430
+ 601450
+ 611470
+ 611480
+ 611490
+ 611481
+ 621470
+ 621490
+ 621500
+ 621510
+ 621520
+ 631530
+ 631540
+ 631550
+ 631560
+ 641520
+ 641540
+ 641550
+ 641560
+ 641570
+ 641600
+
+
+% materials for detectors
 
 mat Pu238   -1
 94238.09c  1.0
@@ -96,45 +237,23 @@ mat Pu241   -1
 mat Pu242   -1
 94242.09c  1.0
 
-set bumode 1
-set pcc 1
-set xscalc 2 % cross section from spectrum
+% detectors
 
-set powdens 40.0E-3
+det 1          % Detector 1 
+du  1          % Flux in pin 1
 
-dep butot
-
-0.1
-0.5
-1
-5
-
-set inventory
-
-942380
-942390
-942400
-942410
-
-set egrid 1e-5 % Cross section grid thinning (to reduce memory requirement)
-
-det 1          % Detector number 1 
-du  1          % Flux in pin (universe) number 1
-
-det 2          % Detector number 2 
-du  1          % Flux in pin (universe) number 1
+det 2          % Detector 2 
+du  1          % Flux in pin 1
 dr  18 Pu238   % folded with fission reaction rates
 dr  18 Pu239 
 dr  18 Pu240 
 dr  18 Pu241 
 dr  18 Pu242 
 
-det 3          % Detector number 3 
-du  1          % Flux in pin (universe) number 1
+det 3          % Detector 3 
+du  1          % Flux in pin 1
 dr 102 Pu238   % folded with capture reaction rates
 dr 102 Pu239
 dr 102 Pu240
 dr 102 Pu241
 dr 102 Pu242
-
-
