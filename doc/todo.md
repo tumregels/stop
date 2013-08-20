@@ -1,11 +1,9 @@
 URGENT
 =======
 
-1. Add burnup module
+1. add error checking for forgotten '<>' in makeSerpInp.m
 
-2. add error checking for forgotten '<>' in makeSerpInp.m
-
-3. finalize XSEC for SFR and compare XSEC with the old one.
+2. finalize XSEC for SFR and compare XSEC with the old one.
 
 HIGH PRIORITY
 =============
@@ -13,11 +11,6 @@ HIGH PRIORITY
 1. adjust saveResults function to save only results and staged structure.
 
 2. '-delcr_base' check for SFR
-
-3. add inpPar(i) structure to the results(i) structure 
-    and modify dataOptimizer.
-
-4. create symlink for the Serpent Libraries and change them in the code(fail)
 
 MEDIUM PRIORITY
 ===============

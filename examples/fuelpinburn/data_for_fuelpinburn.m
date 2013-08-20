@@ -50,4 +50,29 @@ for n = 1:length(HEXR)
     
 end
 
+s1 = results(1).res(42);
+s2 = results(2).res(42);
+s3 = results(3).res(42);
+
+s1 = xsec.dataOptimizer(s1);
+s2 = xsec.dataOptimizer(s2);
+s3 = xsec.dataOptimizer(s3);
+
+card = xsec();
+card.comp_num(1);
+card.base_macro(s1,1);
+card.dxs_dtf(s1,1);
+card.dxs_ddm(s1,1);
+card.dxs_axexp(s1,1);
+card.dxs_radexp(s1,1);
+
+card.comp_num(2);
+card.base_macro(s2,2);
+
+s3 = (s1 + s2)./10;
+card.comp_num(2);
+card.base_macro(s3,2);
+card.display();
+card.write();
+
 
