@@ -14,11 +14,17 @@ end
 
 saveResPar = unique([staged.saveResPar; getDefaultResPar]);
 
-[resFullName detFullNames depFullName] = getFileNames(serpInpFullName);
+if exist([serpInpFullName '_res.m'],'file')==2
+    results.res = read_res(serpInpFullName, saveResPar);
+end
 
-results.res = read_res(resFullName, saveResPar);
-results.det = read_det(detFullNames);
-results.dep = read_dep(depFullName);
+if exist([serpInpFullName '_det0.m'],'file')==2
+    results.det = read_det(serpInpFullName);
+end
+
+if exist([serpInpFullName '_dep.m'],'file')==2
+    results.dep = read_dep(serpInpFullName);
+end
 
 results.serpInput = staged.serpInput;
 results.inpPar = staged.inpPar;
@@ -26,14 +32,15 @@ results.serpInpName = staged.serpInpName;
 
 %==========================================================================
 
-function res = read_res(serpResFile, saveResPar)
+function res = read_res(serpInpFullName, saveResPar)
 
-[pathstr, name, ~] = fileparts(serpResFile);
-run([pathstr filesep name])
+resFile = dir([serpInpFullName '_res.m']);
 
-uniMat = reshape(GC_UNI,length(unique(GC_UNI)),[]);
-[uniNum, burnupNum] = size(uniMat);
-ind = find(GC_UNI == 0);
+if numel(resFile) > 1
+    error('stom:moreThanOneResFile',...
+        'There must be only one _res.m file inside "%s" directory',path)
+end
+
 [row col] = size(saveResPar);
 
 if col ~= 1
@@ -42,19 +49,26 @@ if col ~= 1
         'e.g. {''ANA_KEFF'';''IMP_KEFF''}']);
 end
 
+run([serpInpFullName '_res.m'])
+
+gc_uni = unique(GC_UNI);
+stepSize = length(gc_uni)-1;
+ind = find(GC_UNI == 0);
+burnupNum = length(ind);
+
 for k = 1:burnupNum
     for i = 1:row
         par = saveResPar{i};
         value = eval(par);
         try
-            res(k).(par) = value(ind(k):ind(k)+uniNum-1,:);
+            res(k).(par) = value(ind(k):ind(k)+stepSize,:);
         catch exception
-            len_val = length(value);
+            [len_val,~] = size(value);
             len_uni = length(GC_UNI);
             if len_val~=len_uni
                 warning(['Variable %s has length of %d.\n',...
                     'Expected length is %d. ',...
-                    'Probably a Serpent Bug'], par, len_val, len_uni)
+                    'Probably Serpent bug.'], par, len_val, len_uni)
             else
                 throw(exception)
             end
@@ -64,17 +78,28 @@ end
 
 %==========================================================================
 
-function det = read_det(detFullNames)
+function det = read_det(serpInpFullName)
 
-[path, name, ~] = fileparts(detFullNames{1});
-run([path filesep name])
+% get _det*m file names
+[path, name, ~] = fileparts(serpInpFullName);
+
+det = dir([serpInpFullName '_det*.m']);
+[detName{1:numel(det)}] = det.name;
+
+for k = 1:numel(detName)
+    fname = [name '_det' num2str(k-1) '.m'];
+    idx = find(strcmp(detName, fname));
+    detFullName{k} = fullfile(path,detName{idx}(1:end-2));% remove .m
+end
+
+% extract data from all _det*.m files which start with 'DET'
+run(detFullName{1})
 vars = who('DET*');
 
 
-for i = 1:length(detFullNames)
+for i = 1:length(detFullName)
     
-    [path, name, ~] = fileparts(detFullNames{i});
-    run([path filesep name]);
+    run(detFullName{i});
     
     for j = 1:length(vars)
         
@@ -84,58 +109,28 @@ for i = 1:length(detFullNames)
     end
     
     clear('-regexp', '^DET')
+    
 end
 %==========================================================================
 
-function dep = read_dep(depFullName)
+function dep = read_dep(serpInpFullName)
 
-[path, name, ~] = fileparts(depFullName);
-run([path filesep name])
+% get _dep.m file name
 
-dep.FileName = name;
+depName = dir([serpInpFullName '_dep.m']);
+
+if numel(depName) > 1
+    error('stom:moreThanOneDepFile',...
+        'There must be only one _dep.m file inside "%s" directory',path)
+end
+
+run([serpInpFullName '_dep'])
+
 var = whos('-regexp','^[BDTZNi]');
 [varName{1:numel(var)}] = var.name;
 
 for i = 1:length(varName)
     dep.(varName{i}) = eval(varName{i});
-end
-
-
-%==========================================================================
-
-function [resFullName detFullName depFullName] = getFileNames(serpInpFullName)
-
-[path, name, ~] = fileparts(serpInpFullName);
-
-% get _det*m file names
-det = dir(fullfile(path, [name '_det*.m']));
-[detName{1:numel(det)}] = det.name;
-
-for k = 1:numel(detName)
-    fname = [name '_det' num2str(k-1) '.m'];
-    idx = find(strcmp(detName, fname));
-    detFullName{k} = fullfile(path,detName{idx});
-end
-
-% get _res.m file name
-resName = dir(fullfile(path, [name '_res.m']));
-
-if numel(resName) == 1
-    resFullName = fullfile(path, resName.name);
-elseif numel(resName) > 1
-    error('stom:moreThanOneResFile',...
-        'There must be only one _res.m file inside "%s" directory',path)
-end
-
-
-% get _dep.m file name
-depName = dir(fullfile(path, [name '_dep.m']));
-
-if numel(depName) == 1
-    depFullName = fullfile(path, depName.name);
-elseif numel(depName) > 1
-    error('stom:moreThanOneDepFile',...
-        'There must be only one _dep.m file inside "%s" directory',path)
 end
 
 %==========================================================================

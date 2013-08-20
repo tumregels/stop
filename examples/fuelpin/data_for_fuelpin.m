@@ -52,9 +52,9 @@ end
 
 % generate xsec card
 
-s1 = results(1).resm;
-s2 = results(2).resm;
-s3 = results(3).resm;
+s1 = results(1).res;
+s2 = results(2).res;
+s3 = results(3).res;
 
 s1 = xsec.dataOptimizer(s1);
 s2 = xsec.dataOptimizer(s2);
