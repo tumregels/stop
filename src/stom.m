@@ -4,12 +4,11 @@ function [results calc] = stom(calc)
 genData = [calc.genData];
 inpPar = [calc.inpPar];
 
-% read parametric input as text
-fullFileName = fullfile(genData.serpParInpDir, genData.serpParInpName);
-serpParInp = fileread(fullFileName);
+% get full path to *.spi file
+serpParInpFullName = fullfile(genData.serpParInpDir, genData.serpParInpName);
 
 % make input template
-[serpInput, serpInpLog] = stom.makeSerpInp(serpParInp, inpPar);
+[serpInput, serpInpLog] = stom.makeSerpInp(serpParInpFullName, inpPar);
 
 % write input template to file
 staged.serpInput   = serpInput;

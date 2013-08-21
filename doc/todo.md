@@ -1,9 +1,11 @@
 URGENT
 =======
 
-1. add error checking for forgotten '<>' in makeSerpInp.m
+1. throw serpent errors!
 
-2. finalize XSEC for SFR and compare XSEC with the old one.
+2. add 'isEcho' mode, set isTest to default isEcho.
+
+3. finalize XSEC for SFR and compare XSEC with the old one.
 
 HIGH PRIORITY
 =============

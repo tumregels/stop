@@ -1,49 +1,95 @@
-function [serpInput serpInpLog] = makeSerpInp(serpParInp, inpPar)
+function [serpInput serpInpLog] = makeSerpInp(serpParInpFullName, inpPar)
 
-    [uniqPar equation expression] = getSerpInpPar(serpParInp);
+str = fileread(serpParInpFullName);
 
-    assert(sum(isfield(inpPar, uniqPar ))==length(uniqPar))
+[uniqPar equation expression] = getSerpInpPar(str);
 
-    evalEquation = evalSerpInpEquation(uniqPar, inpPar, equation);
-
-    serpInput = serpParInp;
-    for i = 1:length(expression)
-        serpInput = strrep(serpInput,expression{i}, evalEquation{i});
+try
+    assert( length(fieldnames(inpPar))==length(uniqPar) )
+catch exception
+    if (strcmp(exception.identifier, ...
+            'MATLAB:assert:failed'))
+        disp('List of parameters inside data file')
+        disp(fieldnames(inpPar))
+        disp(['List of parameters in "' serpParInpFullName '" file'])
+        disp(uniqPar(:))
+        error('stom:wrongSerpentInput',...
+            ['Wrong input file "%s".\n',...
+            'Check list of input parameters'],...
+            serpParInpFullName)
+    else
+        % Unknown error.
+        throw(exception);
     end
+end
 
-    serpInpLog = [expression', equation', evalEquation'];
+evalEquation = evalSerpInpEquation(uniqPar, inpPar, equation);
+
+[serpInput serpInpLog] = cookSerpInput(str, ...
+    expression, equation, evalEquation);
+
+
 
 %==========================================================================
 
 function [uniqPar equation expression] = getSerpInpPar(serpParInp)
 
-    exp = '<(?<equation>[^>]+)>';
-    [match expression] = regexp(serpParInp, exp,'names','match');
+% match = regexp(serpParInp, '[\n]', 'split');
 
-    [equation{1:length(match)}] = match.equation;
+exp = '<(?<equation>[^>]+)>';
+[match expression] = regexp(serpParInp, exp,'names','match');
+[equation{1:length(match)}] = match.equation;
 
-    exp = '[A-Z]\w+';
-    for i = 1:length(match)
+exp = '[A-Za-z]+\w+';
+for i = 1:length(match)
+    try
         param(i) = regexp(equation{i}, exp,'match');
+        
+    catch exception
+        
+        if (strcmp(exception.identifier, ...
+                'MATLAB:subsassignnumelmismatch'))
+            disp(equation{i});
+            s1 = 'Wrong input parameter.';
+            s2 = ' Probably "<" or ">" is missing in *.spi file.\n';
+            msg = [s1 s2 equation{i}];
+            error('stom:makeSerpInp:WrongSerpentInput', msg);
+        else
+            % Unknown error.
+            throw(exception);
+        end
     end
+end
 
-    uniqPar = unique(param);
+uniqPar = unique(param);
 
 %==========================================================================
 
 function evalEquation = evalSerpInpEquation(uniqPar, inpPar, equation)
 
-    for i = 1:length(uniqPar)
-        eval([uniqPar{i} '= inpPar.(uniqPar{i});'])
-    end
+for i = 1:length(uniqPar)
+    eval([uniqPar{i} '= inpPar.(uniqPar{i});'])
+end
 
-    for i = 1:length(equation)
-        value = eval(equation{i});
-        if iscell(value)
-            evalEquation{i} = num2str(value{1});
-        else
-            evalEquation{i} = num2str(value);
-        end
+for i = 1:length(equation)
+    value = eval(equation{i});
+    if iscell(value)
+        evalEquation{i} = num2str(value{1});
+    else
+        evalEquation{i} = num2str(value);
     end
+end
+
+%==========================================================================
+
+function [serpInput serpInpLog] = cookSerpInput(str,...
+    expression, equation, evalEquation)
+
+serpInput = str;
+for i = 1:length(expression)
+    serpInput = strrep(serpInput, expression{i}, evalEquation{i});
+end
+
+serpInpLog = [expression', equation', evalEquation'];
 
 
