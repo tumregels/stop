@@ -18,6 +18,7 @@ staged.calcNum     = genData.calcNum;
 staged.saveDir     = genData.saveDir;
 staged.isContinue  = genData.isContinue;
 staged.isTest      = genData.isTest;
+staged.isEcho      = genData.isEcho;
 
 staged = stom.writeSerpFile(staged);
 

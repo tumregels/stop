@@ -13,6 +13,7 @@ genData.saveResPar = {'ANA_KEFF';'IMP_KEFF'};
 
 genData.isTest  = false;
 genData.isContinue = false;
+genData.isEcho = false;
 
 % list of parameters to be used during simulation
 
@@ -52,28 +53,31 @@ end
 
 % generate xsec card
 
-s1 = results(1).res;
-s2 = results(2).res;
-s3 = results(3).res;
-
-s1 = xsec.dataOptimizer(s1);
-s2 = xsec.dataOptimizer(s2);
-s3 = xsec.dataOptimizer(s3);
-
-card = xsec();
-card.comp_num(1);
-card.base_macro(s1,1);
-card.dxs_dtf(s1,1);
-card.dxs_ddm(s1,1);
-card.dxs_axexp(s1,1);
-card.dxs_radexp(s1,1);
-
-card.comp_num(2);
-card.base_macro(s2,2);
-
-s3 = (s1 + s2)./10;
-card.comp_num(3);
-card.base_macro(s3,3);
-card.display();
-card.write();
-
+if genData.isTest == false
+    
+    s1 = results(1).res;
+    s2 = results(2).res;
+    s3 = results(3).res;
+    
+    s1 = xsec.dataOptimizer(s1);
+    s2 = xsec.dataOptimizer(s2);
+    s3 = xsec.dataOptimizer(s3);
+    
+    card = xsec();
+    card.comp_num(1);
+    card.base_macro(s1,1);
+    card.dxs_dtf(s1,1);
+    card.dxs_ddm(s1,1);
+    card.dxs_axexp(s1,1);
+    card.dxs_radexp(s1,1);
+    
+    card.comp_num(2);
+    card.base_macro(s2,2);
+    
+    s3 = (s1 + s2)./10;
+    card.comp_num(3);
+    card.base_macro(s3,3);
+    card.display();
+    card.write();
+    
+end

@@ -13,6 +13,7 @@ genData.saveResPar = {'ANA_KEFF';'IMP_KEFF'};
 
 genData.isTest  = false;
 genData.isContinue = false;
+genData.isEcho = false;
 
 % list of parameters to be used during simulation
 
