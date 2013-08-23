@@ -1,18 +1,18 @@
 URGENT
 =======
 
-1. throw serpent errors!
+1. finalize XSEC for SFR and compare XSEC with the old one.
 
-2. add 'isEcho' mode, set isTest to default isEcho.
+2. '-delcr_base' check for SFR
 
-3. finalize XSEC for SFR and compare XSEC with the old one.
+3. remove save 'AllResults'
 
 HIGH PRIORITY
 =============
 
-1. adjust saveResults function to save only results and staged structure.
+1. adjust saveResults function
 
-2. '-delcr_base' check for SFR
+2. adjust stom for varargout functionality
 
 MEDIUM PRIORITY
 ===============
