@@ -12,13 +12,13 @@ catch exception
     if (strcmp(exception.identifier, ...
             'MATLAB:assert:failed'))
         disp('List of parameters inside data file')
-        disp(fieldnames(inpPar))
-        disp(['List of parameters in "' serpParInpFullName '" file'])
+        disp(fieldnames(calc.values))
+        disp(['List of parameters in "' calc.serpParInp.name '" file'])
         disp(uniqPar(:))
         error('stom:wrongSerpentInput',...
             ['Wrong input file "%s".\n',...
             'Check list of input parameters'],...
-            serpParInpFullName)
+            calc.serpParInp.name)
     else
         % Unknown error.
         throw(exception);
