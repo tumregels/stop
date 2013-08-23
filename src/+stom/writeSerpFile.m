@@ -1,11 +1,11 @@
-function staged = writeSerpFile(staged)
+function results = writeSerpFile(results, calc)
 
-serpInput = staged.serpInput;
-isContinue = staged.isContinue;
+serpInput = results.serpInp.file;
+isContinue = calc.isContinue;
 
-[calcDir serpInpName] = makeNames(staged.serpInpName, ...
-                                staged.calcNum, ...
-                                staged.saveDir);
+[calcDir serpInpName] = makeNames(calc.serpParInp.name, ...
+                                calc.name, ...
+                                calc.saveDir);
                             
                          
 serpInpFullName = fullfile(calcDir, serpInpName);
@@ -20,10 +20,9 @@ else
     created = true;
 end
 
-staged.serpInpName = serpInpName;
-staged.calcDir = calcDir;
-staged.serpInpFullName = serpInpFullName;
-staged.created = created;
+results.serpInp.name = serpInpName;
+results.serpInp.dir = calcDir;
+results.serpInp.fullname = serpInpFullName;
 
 %==========================================================================
 

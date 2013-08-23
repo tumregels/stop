@@ -1,11 +1,13 @@
-function [serpInput serpInpLog] = makeSerpInp(serpParInpFullName, inpPar)
+function [serpInput serpInpLog] = makeSerpInp(calc)
 
-str = fileread(serpParInpFullName);
+dir = fullfile(calc.serpParInp.dir, calc.serpParInp.name);
+
+str = fileread(dir);
 
 [uniqPar equation expression] = getSerpInpPar(str);
 
 try
-    assert( length(fieldnames(inpPar))==length(uniqPar) )
+    assert( length(fieldnames(calc.values))==length(uniqPar) )
 catch exception
     if (strcmp(exception.identifier, ...
             'MATLAB:assert:failed'))
@@ -23,7 +25,7 @@ catch exception
     end
 end
 
-evalEquation = evalSerpInpEquation(uniqPar, inpPar, equation);
+evalEquation = evalSerpInpEquation(uniqPar, calc.values, equation);
 
 [serpInput serpInpLog] = cookSerpInput(str, ...
     expression, equation, evalEquation);

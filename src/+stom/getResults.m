@@ -1,6 +1,6 @@
-function results = getResults(staged)
+function results = getResults(results, calc)
 
-serpInpFullName = staged.serpInpFullName;
+serpInpFullName = results.serpInp.fullname;
 
 simStatus = stom.getSimComplStatus(serpInpFullName);
 
@@ -12,7 +12,7 @@ elseif simStatus == -1
         'Simulation "%s_res.m" does not exist', serpInpFullName )
 end
 
-saveResPar = unique([staged.saveResPar; getDefaultResPar]);
+saveResPar = unique([calc.saveResPar; getDefaultResPar]);
 
 if exist([serpInpFullName '_res.m'],'file')==2
     results.res = read_res(serpInpFullName, saveResPar);
@@ -25,10 +25,6 @@ end
 if exist([serpInpFullName '_dep.m'],'file')==2
     results.dep = read_dep(serpInpFullName);
 end
-
-results.serpInput = staged.serpInput;
-results.inpPar = staged.inpPar;
-results.serpInpName = staged.serpInpName;
 
 %==========================================================================
 

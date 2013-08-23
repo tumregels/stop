@@ -1,12 +1,12 @@
-function [simStatus staged] = runCalculation(staged)
+function [simStatus results] = runCalculation(results, calc)
 
-fullFileName = staged.serpInpFullName;
+fullFileName = results.serpInp.fullname;
 
 isSimComplete = stom.getSimComplStatus(fullFileName);
 
-if isSimComplete == true && ~staged.isTest && staged.isContinue
-    staged.simResults = 'Simulation exists and is complete';
-    staged.isSimComplete = true;
+if isSimComplete == true && ~calc.isTest && calc.isContinue
+    results.simResults = 'Simulation exists and is complete';
+    results.isSimComplete = true;
     simStatus = true;
     
     warning('stom:runCalculation',...
@@ -15,69 +15,69 @@ if isSimComplete == true && ~staged.isTest && staged.isContinue
         [fullFileName '_res.m'])
     return
 else
-    if staged.isTest
-        [simStatus staged] = runTestCalc(staged);
+    if calc.isTest
+        [simStatus results] = runTestCalc(results, calc);
     else
-        [simStatus staged] = runCalc(staged);
+        [simStatus results] = runCalc(results, calc);
     end
 end
 
 %==========================================================================
 
-function [simStatus staged] = runTestCalc(staged)
+function [simStatus results] = runTestCalc(results, calc)
 
-input = staged.serpInpFullName;
+input = results.serpInp.fullname;
 assert(exist(input,'file')==2,'MATLAB:assert:failed','File %s not found.', input)
 
-command = [staged.serpCallCommand ' ' input ' -testgeom 10000 -plot '...
+command = [calc.serpExe ' ' input ' -testgeom 10000 -plot '...
     ' 2>&1 | tee -a ' input '.serplog ;'];
 
-[~, results] = system(command,'-echo');
+[~, stdout] = system(command,'-echo');
 
-ind = strfind(results,' error ');
+ind = strfind(stdout,' error ');
 
 if isempty(ind)
     simStatus = true;    
-    staged.simResults = results;
+    results.stdout = stdout;
 else
     simStatus = false;
-    staged.simError = results(ind(1):end);
+    results.simError = stdout(ind(1):end);
 end
 
-staged.isSimComplete = simStatus;
+results.isSimComplete = simStatus;
 
 %==========================================================================
 
-function [simStatus staged] = runCalc(staged)
+function [simStatus results] = runCalc(results, calc)
 
-input = staged.serpInpFullName;
+input = results.serpInp.fullname;
 
 assert(exist(input,'file')==2, 'MATLAB:assert:failed',...
     'File %s not found.', input)
 
-command = [staged.serpCallCommand ' ' input ...
+command = [calc.serpExe ' ' input ...
     ' 2>&1 | tee -a ' input '.serplog ; ( exit ${PIPESTATUS} )'];
 
-if staged.isEcho == true
-    [st, results] = system(command,'-echo');
+if calc.isEcho == true
+    [st, stdout] = system(command,'-echo');
 else
-    [st, results] = system(command);
+    [st, stdout] = system(command);
 end
 
 if st == 0
     simStatus = true;
-    ind = strfind(results,'Finished ');
-    staged.simResults = results(ind(end):end);
-    dispSerpentMessage(staged.simResults);
+    ind = strfind(stdout,'Finished ');
+    results.stdout = stdout(ind(end):end);
+    dispSerpentMessage(results.stdout);
 else
-    ind = strfind(results,' error ');
-    staged.simError = results(ind(end):end);
+    ind = strfind(stdout,' error ');
+    results.simError = stdout(ind(end):end);
     simStatus = false;
-    dispSerpentMessage(staged.simError);
+    dispSerpentMessage(results.simError);
     error('Wrong Serpent input file\n "%s".',input);
 end
 
-staged.isSimComplete = simStatus;
+results.isSimComplete = simStatus;
 
 %==========================================================================
 

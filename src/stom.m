@@ -1,53 +1,31 @@
-function [results calc] = stom(calc)
-
-% vectorize the access to elements in a structure array
-genData = [calc.genData];
-inpPar = [calc.inpPar];
+function [simStatus results] = stom(calc)
 
 % get full path to *.spi file
-serpParInpFullName = fullfile(genData.serpParInpDir, genData.serpParInpName);
+% serpParInpFullName = fullfile(calc.serpParInp.dir, calc.serpParInp.name);
 
 % make input template
-[serpInput, serpInpLog] = stom.makeSerpInp(serpParInpFullName, inpPar);
+[serpInput, serpInpLog] = stom.makeSerpInp(calc);
 
 % write input template to file
-staged.serpInput   = serpInput;
-staged.serpInpLog  = serpInpLog;
-staged.serpInpName = genData.serpParInpName;
-staged.calcNum     = genData.calcNum;
-staged.saveDir     = genData.saveDir;
-staged.isContinue  = genData.isContinue;
-staged.isTest      = genData.isTest;
-staged.isEcho      = genData.isEcho;
+results.serpInp.file = serpInput;
+results.serpInp.log = serpInpLog;
+results.serpInp.values = calc.values;
 
-staged = stom.writeSerpFile(staged);
+results = stom.writeSerpFile(results, calc);
 
-% run calculations
-staged.serpCallCommand = genData.serpCallCommand;
-
-[simStatus staged] = stom.runCalculation(staged);
+[simStatus results] = stom.runCalculation(results, calc);
 
 % extract data from res.m and det.m files
 
-staged.saveResPar = genData.saveResPar;
-staged.inpPar = inpPar;
-
-if staged.isTest == false
-    results = stom.getResults(staged);
+if calc.isTest == false
+    results = stom.getResults(results, calc);
     
     % save results
-    staged.saveResDir = fullfile(staged.saveDir,'Results');
-    stom.saveResults(results, staged.saveResDir, staged.serpInpName);
+    saveResDir = fullfile(calc.saveDir,'Results');
+    stom.saveResults(results, saveResDir, results.serpInp.name);
     
-    % save all results
-    calc.results = results;
-    calc.staged = staged;
-    
-    staged.saveFullResDir = fullfile(staged.saveDir,'FullResults');
-    stom.saveResults(calc, staged.saveFullResDir, staged.serpInpName);
 else
     results = NaN;
-    calc = NaN;
 end
 
 
