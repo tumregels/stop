@@ -2,6 +2,7 @@ classdef xsec < handle %< xsec.dataOptimizer
     
     properties(GetAccess = 'private', SetAccess = 'private')
         xsec_card = sprintf('XSEC\n%s',drawline())
+        save_dir = pwd;
     end
     
     methods
@@ -41,15 +42,14 @@ classdef xsec < handle %< xsec.dataOptimizer
             self.xsec_card = [self.xsec_card, str, drawline()];
         end
         
-        function str = delcr_comp(self, data, uni)
-            str = xsec.data2xsec(...
-                '-delcr_comp',data,uni);
+        function str = delcr_comp(self, uni)
+            str = xsec.data2xsec('-delcr_comp',uni);
             self.xsec_card = [self.xsec_card, str, drawline()];
         end
         
-        function str = delcr_base(self, data, uni)
+        function str = delcr_base(self, data1, uni1, data2, uni2)
             str = xsec.data2xsec(...
-                '-delcr_base',data,uni);
+                '-delcr_base',data1,uni1,data2,uni2);
             self.xsec_card = [self.xsec_card, str, drawline()];
         end
         
@@ -57,10 +57,14 @@ classdef xsec < handle %< xsec.dataOptimizer
             disp(self.xsec_card)
         end
         
-        function status = write(self)
-            fname = fullfile(pwd, 'xsecforparcs.txt');
+        function status = write(self, dir)
+            if nargin == 2
+                self.save_dir = dir;
+            end
+            fname = fullfile(self.save_dir, 'xsecforparcs.txt');
             fid = fopen(fname, 'w');
-            assert(fid ~= -1)
+            assert(fid ~= -1,...
+                'Directory "%s" doesn''t exist.',self.save_dir)
             fwrite(fid, self.xsec_card);
             status = fclose(fid);
         end

@@ -36,10 +36,37 @@ else
                     k = k + 1;
                     
                     str = delcr_comp(universe_number);
-                    string = [string, str];                 
+                    string = [string, str];  
                     
-                case {'-delcr_base','-dxs_dtf',...
-                        '-dxs_axexp','-dxs_radexp','-dxs_ddm'}
+                case '-delcr_base'
+                    data_1 = varargin{k+1};
+                    universe_number_1 = varargin{k+2};
+                    data_2 = varargin{k+3};
+                    universe_number_2 = varargin{k+4};
+                    k = k + 4;
+                    
+                    uni_data_1 = getData(data_1,universe_number_1);
+                    uni_data_2 = getData(data_2,universe_number_2);
+                    
+                    % calculate: uni_data_1 - uni_data_2
+                    name = fieldnames(uni_data_1);
+                    for i = 1:length(name)
+                        if strcmp(name{i},'GC_NE')
+                            uni_data.(name{i}) = uni_data_1.(name{i});
+                            continue
+                        end
+                        uni_data.(name{i}) =...
+                            uni_data_1.(name{i}) - uni_data_2.(name{i});
+                    end
+                    
+                    str1 = createBase( arg(2:end), uni_data.base);
+                    str2 = scatMatrix(uni_data.GPRODXS,...
+                        uni_data.GC_NE);
+                    
+                    string = [string, str1, str2];
+                    
+                    
+                case {'-dxs_dtf','-dxs_axexp','-dxs_radexp','-dxs_ddm'}
                     
                     data = varargin{k+1};
                     universe_number = varargin{k+2};
@@ -101,8 +128,8 @@ function str = delcr_comp(gc_uni)
 
 % create delcr_comp string using gc_uni universe number
 
-str = sprintf(' delcr_comp     !%d %d -%d    !UNIVERSE %d %d\n',...
-    gc_uni(1)*ones(1,3),gc_uni(1),gc_uni(1)); 
+str = sprintf(' delcr_comp     %d %d -%d\n',...
+    gc_uni(1)*ones(1,3)); 
 
 %==========================================================================
 

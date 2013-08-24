@@ -9,7 +9,7 @@ function [simStatus results] = stom(calc)
 % write input template to file
 results.serpInp.file = serpInput;
 results.serpInp.log = serpInpLog;
-results.serpInp.values = calc.values;
+results.serpInp.values = calc.values(1);
 
 results = stom.writeSerpFile(results, calc);
 

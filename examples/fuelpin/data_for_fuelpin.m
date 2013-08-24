@@ -25,7 +25,7 @@ calc(2).name = 'diag';
 
 calc(3).values = struct('TITLE','fuelpin3',...
     'HEXR',0.63,'FH',20,'FDC',1.2,'VG',0.02);
-calc(3).name = '';
+calc(3).name = '3';
 
 % add all folders of the stop wrapper to matlab search path
 
