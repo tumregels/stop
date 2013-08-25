@@ -3,6 +3,7 @@ classdef xsec < handle %< xsec.dataOptimizer
     properties(GetAccess = 'private', SetAccess = 'private')
         xsec_card = sprintf('XSEC\n%s',drawline())
         save_dir = pwd;
+        file_name = 'xsecforparcs.txt';
     end
     
     methods
@@ -57,14 +58,21 @@ classdef xsec < handle %< xsec.dataOptimizer
             disp(self.xsec_card)
         end
         
-        function status = write(self, dir)
+        function status = write(self, fullpath)
             if nargin == 2
-                self.save_dir = dir;
+                [path, name, ext] = fileparts(fullpath);
+                if ~isempty(path)
+                    self.save_dir = path;
+                end
+                if ~isempty(name)
+                    self.file_name = [name ext];
+                end
             end
-            fname = fullfile(self.save_dir, 'xsecforparcs.txt');
+            
+            fname = fullfile(self.save_dir, self.file_name);
             fid = fopen(fname, 'w');
             assert(fid ~= -1,...
-                'Directory "%s" doesn''t exist.',self.save_dir)
+                'File "%s" doesn''t exist.',self.save_dir)
             fwrite(fid, self.xsec_card);
             status = fclose(fid);
         end
