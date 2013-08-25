@@ -70,11 +70,7 @@ uniqPar = unique(param);
 function evalEquation = evalSerpInpEquation(uniqPar, inpPar, equation)
 
 for i = 1:length(uniqPar)
-    try
         eval([uniqPar{i} '= inpPar(1).(uniqPar{i})(1);'])
-    catch exception
-        exception
-    end
 end
 
 for i = 1:length(equation)
