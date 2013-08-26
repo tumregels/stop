@@ -25,10 +25,10 @@ catch exception
     end
 end
 
-evalEquation = evalSerpInpEquation(uniqPar, calc.values, equation);
+solvedEquation = evalSerpInpEquation(uniqPar, calc.values, equation);
 
 [serpInput serpInpLog] = cookSerpInput(str, ...
-    expression, equation, evalEquation);
+    expression, equation, solvedEquation);
 
 
 
@@ -67,19 +67,20 @@ uniqPar = unique(param);
 
 %==========================================================================
 
-function evalEquation = evalSerpInpEquation(uniqPar, inpPar, equation)
+function solvedEquation = evalSerpInpEquation(uniqPar, inpPar, equation)
 
 for i = 1:length(uniqPar)
-        eval([uniqPar{i} '= inpPar(1).(uniqPar{i})(1);'])
+    paramValue = inpPar(1).(uniqPar{i});
+    if ischar(paramValue)
+        eval([uniqPar{i} '= paramValue;'])
+    else
+        eval([uniqPar{i} '= paramValue(1);'])
+    end
 end
 
 for i = 1:length(equation)
-    value = eval(equation{i});
-    if iscell(value)
-        evalEquation{i} = num2str(value{1});
-    else
-        evalEquation{i} = num2str(value);
-    end
+    equationValue = eval(equation{i});
+    solvedEquation{i} = num2str(equationValue);
 end
 
 %==========================================================================
