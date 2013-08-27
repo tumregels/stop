@@ -15,15 +15,11 @@ results = stom.writeSerpFile(results, calc);
 
 [simStatus results] = stom.runCalculation(results, calc);
 
-% extract data from res.m and det.m files
-
 if calc.isTest == false
+    % extract data from _res*.m _det*.m and _dep.m files
     results = stom.getResults(results, calc);
-    
     % save results
-    saveResDir = fullfile(calc.saveDir,'Results');
-    stom.saveResults(results, saveResDir, results.serpInp.name);
-    
+    stom.saveResults(results, calc.saveDir, results.serpInp.name);
 else
     results = NaN;
 end

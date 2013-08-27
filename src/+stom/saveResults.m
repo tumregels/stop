@@ -14,7 +14,7 @@ end
 
 varName= genvarname(varName);
 eval([varName '= data;']);
-save(fullfile(saveDir, varName),varName);
+save(fullfile(saveDir, 'Results', varName),varName);
 
 fname = fullfile(saveDir,'allresults.mat');
 
