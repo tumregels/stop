@@ -8,16 +8,16 @@ function saveResults(data, saveDir, varName)
 % saveDir - directory to save data,
 % varName - name of the data structure.
 
-if(~exist(saveDir, 'dir'))
-    mkdir(saveDir);
+resultsDir = fullfile(saveDir,'Results');
+if(~exist(resultsDir, 'dir'))
+    mkdir(resultsDir);
 end
 
 varName= genvarname(varName);
 eval([varName '= data;']);
-save(fullfile(saveDir, 'Results', varName),varName);
+save(fullfile(resultsDir, varName),varName);
 
 fname = fullfile(saveDir,'allresults.mat');
-
 if exist(fname,'file')==2
     save(fname,varName,'-append')
 else
