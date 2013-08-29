@@ -32,7 +32,7 @@ sodium
 
 % Geometry
 
-surf 1 hexxc 0.0 0.0 <HEXR>  % hexagonal lattice surface ( P/D = 1.20 )
+surf 1 hexxc 0.0 0.0 0.60  % hexagonal lattice surface ( P/D = 1.20 )
 
 surf 2 pz -200
 surf 3 pz -100
