@@ -1,8 +1,5 @@
 function [simStatus results] = stom(calc)
 
-% get full path to *.spi file
-% serpParInpFullName = fullfile(calc.serpParInp.dir, calc.serpParInp.name);
-
 % make input template
 [serpInput, serpInpLog] = stom.makeSerpInp(calc);
 
