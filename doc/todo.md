@@ -2,11 +2,11 @@
 HIGH PRIORITY
 =============
 
+1. finalize fuelpinburn
+
 2. prepare GFR LFR and SFR
 
-3. start writing README.md
-
-4. run real calculation and compare XSEC with the old one.
+3. run calculation and compare XSEC with the old one.
 
 MEDIUM PRIORITY
 ===============

@@ -71,6 +71,9 @@ if st == 0
     dispSerpentMessage(results.stdout);
 else
     ind = strfind(stdout,' error ');
+    if isempty(ind)
+        ind = 1;
+    end
     results.stdout = stdout(ind(end):end);
     simStatus = false;
     dispSerpentMessage(results.stdout);
