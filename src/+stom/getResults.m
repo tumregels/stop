@@ -85,7 +85,7 @@ det = dir([serpInpFullName '_det*.m']);
 for k = 1:numel(detName)
     fname = [name '_det' num2str(k-1) '.m'];
     idx = find(strcmp(detName, fname));
-    detFullName{k} = fullfile(path,detName{idx}(1:end-2));% remove .m
+    detFullName{k} = fullfile(path,detName{idx}(1:end-2));%remove extension
 end
 
 % extract data from all _det*.m files which start with 'DET'

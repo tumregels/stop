@@ -5,7 +5,7 @@ fullFileName = results.serpInp.fullname;
 isSimComplete = stom.getSimComplStatus(fullFileName);
 
 if isSimComplete == true && ~calc.isTest && calc.isContinue
-    results.simResults = 'Simulation exists and is complete';
+    results.stdout = 'Simulation exists and is complete';
     results.isSimComplete = true;
     simStatus = true;
     
@@ -41,7 +41,7 @@ if isempty(ind)
     results.stdout = stdout;
 else
     simStatus = false;
-    results.simError = stdout(ind(1):end);
+    results.stdout = stdout(ind(1):end);
 end
 
 results.isSimComplete = simStatus;
@@ -71,9 +71,9 @@ if st == 0
     dispSerpentMessage(results.stdout);
 else
     ind = strfind(stdout,' error ');
-    results.simError = stdout(ind(end):end);
+    results.stdout = stdout(ind(end):end);
     simStatus = false;
-    dispSerpentMessage(results.simError);
+    dispSerpentMessage(results.stdout);
     error('Wrong Serpent input file\n "%s".',input);
 end
 

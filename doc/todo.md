@@ -1,16 +1,12 @@
-URGENT
-=======
-
-1. run real calculation and compare XSEC with the old one.
 
 HIGH PRIORITY
 =============
 
-1. adjust fuelpin with real parameters
-
 2. prepare GFR LFR and SFR
 
 3. start writing README.md
+
+4. run real calculation and compare XSEC with the old one.
 
 MEDIUM PRIORITY
 ===============

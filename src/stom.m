@@ -16,7 +16,7 @@ if calc.isTest == false
     % extract data from _res*.m _det*.m and _dep.m files
     results = stom.getResults(results, calc);
     % save results
-    stom.saveResults(results, calc.saveDir, results.serpInp.name);
+    stom.saveResults(results, calc.serpParInp.dir, results.serpInp.name);
 else
     results = NaN;
 end

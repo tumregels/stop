@@ -1,7 +1,5 @@
 function [uniqPar equation expression] = getSerpInpPar(serpParInp)
 
-% match = regexp(serpParInp, '[\n]', 'split');
-
 exp = '<(?<equation>[^>]+)>';
 [match expression] = regexp(serpParInp, exp,'names','match');
 [equation{1:length(match)}] = match.equation;

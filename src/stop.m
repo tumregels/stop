@@ -1,10 +1,11 @@
-classdef stop
+classdef stop < handle
     
     properties
-        serpExe = 'sss'
+        serpExe = 'sss';
         saveResPar = {'ANA_KEFF';'IMP_KEFF'};
-        saveDir = pwd; % save directory
+        
         name; % calculation name
+        values = struct();
         
         isTest     = false;
         isContinue = true;
@@ -12,10 +13,10 @@ classdef stop
     end
     
     properties (SetAccess = private, GetAccess = public)
-        serpParInp
-        values
+        serpParInp;
+        saveDir; % save directory
     end
-
+    
     methods
         function self = stop(filename)
             
@@ -26,25 +27,30 @@ classdef stop
                 
                 if ~isempty(path)
                     self.serpParInp.dir = path;
-                    self.saveDir = path;
+                else
+                    self.serpParInp.dir = pwd;
                 end
                 
-                if ~isempty(fname)
-                    self.serpParInp.name = [fname, ext];
-                    self.serpParInp.fullname = fullfile(path,[fname ext]);
-                end
+                self.saveDir = self.serpParInp.dir;
+                self.serpParInp.name = [fname, ext];
+                self.serpParInp.fullname = fullfile(path,[fname ext]);
                 
+            else
+                error('File "%s" doesn''t exist.',filename)
             end
             
         end
         
         function [simStatus results] = run(self, varargin)
-            if nargin > 0
+            if nargin > 1
                 for k=1:2:length(varargin)
                     self.values.(varargin{k}) = varargin{k+1};
                 end
+                [simStatus results] = stom(self);
+            else
+                [simStatus results] = stom(self);
             end
-            [simStatus results] = stom(self);
+            self.values = struct();
         end
         
         function displayParameters(self)
@@ -56,6 +62,6 @@ classdef stop
             disp('List of unique equations')
             disp(unique(equation'));
         end
-
+        
     end
 end

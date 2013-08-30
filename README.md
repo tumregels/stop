@@ -19,7 +19,7 @@ To use the software you will need
 Documentation
 -------------
 
-The documentation is in markdown format in docs/ directory.
+The documentation ...
 To download **STOP**, simply run on linux:
 
 	$ git clone git://github.com/tumregels/stop.git
