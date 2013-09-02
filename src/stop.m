@@ -50,7 +50,7 @@ classdef stop < handle
             else
                 [simStatus results] = stom(self);
             end
-            self.values = struct();
+            self.values = struct();% clear all values
         end
         
         function displayParameters(self)

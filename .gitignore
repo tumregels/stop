@@ -8,5 +8,7 @@
 *_res.m
 *_det*.m
 /examples/fuelpin/*
+/examples/fuelpinburn/*
+/examples/sphere/*
 /examples/ESFR/*
 /examples/ELECTRA/*

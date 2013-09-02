@@ -7,7 +7,7 @@ set nfylib "/home/asikth/Documents/xsdata/jeff31/sss_jeff31.nfy"
 set title <TITLE>
 
 set bc 3
-set pop 1000 50 20
+set pop 100 50 20
 set gcu      0 1 2 3
 set nfg 4 0.625E-6 5.5E-3 0.821
 
@@ -52,7 +52,7 @@ cell 9 0 outside           7
 
 % Fuel
 
-mat fuel  -<10.00*FDC>  % Oxide fuel with 10 percent porosity 
+mat fuel  -<10.00*FDC> burn 3  % Oxide fuel with 10 percent porosity 
 94238.<FT>c  0.035  % 
 94239.<FT>c  0.519  % 
 94240.<FT>c  0.238  % Pu vector from spent LWR fuel

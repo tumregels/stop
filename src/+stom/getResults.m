@@ -136,8 +136,8 @@ function defaultRes = getDefaultResPar()
 % return list of parameters necessary to create XSEC card
 
 defaultRes = {...
-    'ADFS';
-    'ADFC';
+    %'ADFS';
+    %'ADFC';
     'BETA_EFF';
     'BETA_ZERO';
     'CHI';
