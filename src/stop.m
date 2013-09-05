@@ -4,12 +4,13 @@ classdef stop < handle
         serpExe = 'sss';
         saveResPar = {'ANA_KEFF';'IMP_KEFF'};
         
-        name; % calculation name
+        name = ''; % calculation name
         values = struct();
         
         isTest     = false;
-        isContinue = true;
+        isContinue = false;
         isEcho     = true;
+        isXSEC     = false;
     end
     
     properties (SetAccess = private, GetAccess = public)
@@ -33,7 +34,8 @@ classdef stop < handle
                 
                 self.saveDir = self.serpParInp.dir;
                 self.serpParInp.name = [fname, ext];
-                self.serpParInp.fullname = fullfile(path,[fname ext]);
+                self.serpParInp.fullname = ...
+                    fullfile(self.serpParInp.dir,[fname ext]);
                 
             else
                 error('File "%s" doesn''t exist.',filename)
@@ -51,6 +53,7 @@ classdef stop < handle
                 [simStatus results] = stom(self);
             end
             self.values = struct();% clear all values
+            self.name = '';% clear name
         end
         
         function displayParameters(self)

@@ -12,10 +12,12 @@ elseif simStatus == -1
         'Simulation "%s_res.m" does not exist', serpInpFullName )
 end
 
-saveResPar = unique([calc.saveResPar; getDefaultResPar]);
+if calc.isXSEC == true
+    calc.saveResPar = unique([calc.saveResPar; getDefaultResPar]);
+end
 
 if exist([serpInpFullName '_res.m'],'file')==2
-    results.res = read_res(serpInpFullName, saveResPar);
+    results.res = read_res(serpInpFullName, calc.saveResPar);
 end
 
 if exist([serpInpFullName '_det0.m'],'file')==2

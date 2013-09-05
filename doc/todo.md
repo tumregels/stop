@@ -2,11 +2,13 @@
 HIGH PRIORITY
 =============
 
-1. finalize fuelpinburn
+1. write wiki pages
 
 2. prepare GFR LFR and SFR
 
 3. run calculation and compare XSEC with the old one.
+
+4. add name checker to stop class
 
 MEDIUM PRIORITY
 ===============
@@ -15,7 +17,7 @@ MEDIUM PRIORITY
 
 2. write mdivide function error
 
-3. remove test folder and +xunit module from git
+3. add test for runCalculation.m
 
 
 LOW PRIORITY

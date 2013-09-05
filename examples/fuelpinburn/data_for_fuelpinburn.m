@@ -10,7 +10,7 @@ sim.saveResPar = {'ANA_KEFF';'IMP_KEFF'};
 sim.isTest  = false;
 sim.isContinue = true;
 sim.isEcho = true;
-
+sim.isXSEC = true;
 sim.displayParameters();
 
 sim.name = 'ref';
