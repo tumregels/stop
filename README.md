@@ -24,7 +24,7 @@ Documentation
 To download and install **stop** wrapper, 
 follow the instructions [here][3].
 
-Tutorial on how to use **stop** can be found [here][4]:
+Short tutorial on how to use the wrapper is [here][4].
 
 Licensing
 ---------
