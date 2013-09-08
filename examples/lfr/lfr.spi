@@ -1,12 +1,12 @@
 % --- LFRMU Core -------------------------
 
-set title "LFRMU-Hot Full Power"    
+set title <TITLE>    
 
 % --- Cross section library file path:
 
-set acelib "sss_jeff31u.xsdata"
-set declib "sss_endfb7.dec"
-set nfylib "sss_endfb7.nfy"
+set acelib "/home/asikth/Documents/xsdata/jeff31/sss_jeff31.xsdata"
+set declib "/home/asikth/Documents/xsdata/jeff31/sss_jeff31.dec"
+set nfylib "/home/asikth/Documents/xsdata/jeff31/sss_jeff31.nfy"
 
 % --- Use of unresolved resonance data :
                                              
@@ -33,8 +33,12 @@ set nfg  33 1.000000E-07 5.400000E-07 4.000000E-06 8.315290E-06 1.370960E-05 2.2
                                                                                                 
 % --- Neutron population and criticality cycles:                                                
                                                                                                                                                                         
-set pop 1500 500 500                                                                                                                                                  
+set pop 100 50 20                                                                                                                                                  
 set  power 1.50E+09  % 1500MW
+
+
+plot 3 1500 1500
+plot 1 1500 1500
 
 % --- Empty lattice position:
                              
@@ -825,7 +829,7 @@ lat 606  2    0.0 0.0   9   9    3.8
 surf   61D00   hexyc    0.0  0.0  10.15000
 surf   61D01   hexyc    0.0  0.0  10.55000
 surf   61D02   hexyc    0.0  0.0  10.80000
-surf   61D03   pz       200.00000
+surf   61D03   pz       <200.0-CR>
 surf   61D04   pz       280.00000
 
 cell  61D901  61  outside                   61D04
@@ -842,8 +846,8 @@ cell  61D906  61  outside                  -61D03
 surf   60D00   hexyc    0.0  0.0  10.15000
 surf   60D01   hexyc    0.0  0.0  10.55000
 surf   60D02   hexyc    0.0  0.0  10.80000
-surf   60D03   pz       60.00000
-surf   60D04   pz       200.00000
+surf   60D03   pz       <60.0-CR>  % 60.00000
+surf   60D04   pz       <200.0-CR> % 200.00000
 
 cell  60D901  60  outside                   60D04
 
@@ -860,7 +864,7 @@ surf   59D00   hexyc    0.0  0.0  10.15000
 surf   59D01   hexyc    0.0  0.0  10.55000
 surf   59D02   hexyc    0.0  0.0  10.80000
 surf   59D03   pz       -400.00000
-surf   59D04   pz       60.00000
+surf   59D04   pz       <60.0-CR>
 
 cell  59D901  59  outside                   59D04
 
@@ -875,8 +879,8 @@ cell  59D906  59  outside                  -59D03
 
 surf   D00   hexyc    0.0  0.0  10.80000
 surf   D01   pz       -400.00000
-surf   D02   pz       60.00000
-surf   D03   pz       200.00000
+surf   D02   pz       <60.0-CR>
+surf   D03   pz       <200.0-CR>
 surf   D04   pz       280.00000
 
 cell  D901  600  outside                   D04
@@ -1043,46 +1047,46 @@ cell  F905  0  outside                   -F02
 
 mat fuel1      -11.0049 
 
-92234.12c       0.000009
-92235.12c       0.001176
-92236.12c       0.000029
-92238.12c       0.286329
-94238.12c       0.001154
-94239.12c       0.028028
-94240.12c       0.013249
-94241.12c       0.002983
-94242.12c       0.003744          
- 8016.12c       0.663300
+92234.<FTL>c       0.000009
+92235.<FTL>c       0.001176
+92236.<FTL>c       0.000029
+92238.<FTL>c       0.286329
+94238.<FTL>c       0.001154
+94239.<FTL>c       0.028028
+94240.<FTL>c       0.013249
+94241.<FTL>c       0.002983
+94242.<FTL>c       0.003744          
+ 8016.<FTL>c       0.663300
  
 % --- central MOX fuel  
             
 mat fuel2      -11.0092
                                
-92234.12c       0.000009                
-92235.12c       0.001164                
-92236.12c       0.000028                
-92238.12c       0.283311                
-94238.12c       0.001225                
-94239.12c       0.029755                
-94240.12c       0.014065                
-94241.12c       0.003167                
-94242.12c       0.003975                            
- 8016.12c       0.663300 
+92234.<FTL>c       0.000009                
+92235.<FTL>c       0.001164                
+92236.<FTL>c       0.000028                
+92238.<FTL>c       0.283311                
+94238.<FTL>c       0.001225                
+94239.<FTL>c       0.029755                
+94240.<FTL>c       0.014065                
+94241.<FTL>c       0.003167                
+94242.<FTL>c       0.003975                            
+ 8016.<FTL>c       0.663300 
  
 % --- outer MOX fuel  
             
 mat fuel3      -11.0236 
                                      
-92234.12c       0.000008                
-92235.12c       0.001122                
-92236.12c       0.000027                
-92238.12c       0.273253                
-94238.12c       0.001463                
-94239.12c       0.035514                
-94240.12c       0.016788                
-94241.12c       0.003780                
-94242.12c       0.004744                  
- 8016.12c       0.663300
+92234.<FTL>c       0.000008                
+92235.<FTL>c       0.001122                
+92236.<FTL>c       0.000027                
+92238.<FTL>c       0.273253                
+94238.<FTL>c       0.001463                
+94239.<FTL>c       0.035514                
+94240.<FTL>c       0.016788                
+94241.<FTL>c       0.003780                
+94242.<FTL>c       0.004744                  
+ 8016.<FTL>c       0.663300
  
 % --- Reflector
 
