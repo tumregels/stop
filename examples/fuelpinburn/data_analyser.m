@@ -59,7 +59,7 @@ xs = xsec();
 
 xs.comp_num(1);
 xs.base_macro(ref,1);
-xs.dxs_dtf( (fthi-ref)./(log(1800)-log(300)),1);
+xs.dxs_dtf( (fthi-ref)/(log(1800)-log(300)),1);
 xs.dxs_ddm( (cdlow-ref)./1100,1);
 xs.dxs_axexp( (fhhi-ref)./2700,1);
 

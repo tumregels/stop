@@ -1,12 +1,12 @@
 % --- ESFRMU Core -------------------------
 
-set title "GFRMU-Hot Full Power"    
+set title <TITLE>    
 
 % --- Cross section library file path:
 
-set acelib "sss_jeff31u.xsdata"
-set declib "sss_endfb7.dec"
-set nfylib "sss_endfb7.nfy"
+set acelib "/home/asikth/Documents/xsdata/jeff31/sss_jeff31.xsdata"
+set declib "/home/asikth/Documents/xsdata/jeff31/sss_jeff31.dec"
+set nfylib "/home/asikth/Documents/xsdata/jeff31/sss_jeff31.nfy"
 
 % --- Use of unresolved resonance data :
                                              
@@ -33,7 +33,8 @@ set nfg  33 1.000000E-07 5.400000E-07 4.000000E-06 8.315290E-06 1.370960E-05 2.2
                                                                                                 
 % --- Neutron population and criticality cycles:                                               
                                                                                                                                                                         
-set pop 1500 500 500                                                                                                                                                                      
+set pop 100 50 20                                                                                                                                                                      
+
 set  power 2.40E+09  % 2400MW
 
 % --- Empty lattice position:
@@ -394,7 +395,7 @@ surf   60C01   hexyc    0.0  0.0  2.50000
 surf   60C02   hexyc    0.0  0.0  8.07000
 surf   60C03   hexyc    0.0  0.0  8.82000
 surf   60C04   hexyc    0.0  0.0  8.91450
-surf   60C05   pz       82.50000
+surf   60C05   pz       <CRP> % 82.50000
 surf   60C06   pz       267.50000
 
 cell  60C901  60  outside                   60C06
@@ -415,7 +416,7 @@ surf   61C01   hexyc    0.0  0.0  8.07000
 surf   61C02   hexyc    0.0  0.0  8.82000
 surf   61C03   hexyc    0.0  0.0  8.91450
 surf   61C04   pz       -232.50000
-surf   61C05   pz       82.50000
+surf   61C05   pz       <CRP> % 82.50000
 
 cell  61C901  61  outside                   61C05
 
@@ -431,7 +432,7 @@ cell  61C907  61  outside                  -61C04
 
 surf   C00   hexyc    0.0  0.0  8.91450
 surf   C01   pz       -232.50000
-surf   C02   pz       82.50000
+surf   C02   pz       <CRP> % 82.50000
 surf   C03   pz       267.50000
 
 cell  C901  600  outside                   C03
@@ -449,7 +450,7 @@ surf  70D01   hexyc    0.0  0.0  2.50000
 surf  70D02   hexyc    0.0  0.0  8.0700
 surf  70D03   hexyc    0.0  0.0  8.82000
 surf  70D04   hexyc    0.0  0.0  8.91450
-surf  70D05   pz       82.50000
+surf  70D05   pz       <CRP> % 82.50000
 surf  70D06   pz       267.50000
 
 cell 70D901 70  outside                  70D06
@@ -470,7 +471,7 @@ surf   71D01   hexyc    0.0  0.0  8.0700
 surf   71D02   hexyc    0.0  0.0  8.82000
 surf   71D03   hexyc    0.0  0.0  8.91450
 surf   71D04   pz       -232.50000
-surf   71D05   pz       82.50000
+surf   71D05   pz       <CRP> % 82.50000
 
 cell  71D901  71  outside                   71D05
 
@@ -486,7 +487,7 @@ cell  71D907  71  outside                  -71D04
 
 surf   D00   hexyc    0.0  0.0  8.91450
 surf   D01   pz       -232.50000
-surf   D02   pz       82.50000
+surf   D02   pz       <CRP> % 82.50000
 surf   D03   pz       267.50000
 
 cell  D901 700  outside                   D03
@@ -603,29 +604,29 @@ cell  F903     0  outside           -F02                  % outside world
                                                          
 mat fuel1   -10.89718                
                                                          
-92235.12c   -0.005807              % U-235.12c           
-92238.12c   -0.811021              % U-238.12c           
-94238.12c   -0.003651              % Pu-238.12c          
-94239.12c   -0.075724              % Pu-239.12c          
-94240.12c   -0.035022              % Pu-240.12c          
-94241.12c   -0.010006              % Pu-241.12c          
-94242.12c   -0.009871              % Pu-242.12c          
-95241.12c   -0.000947              % Am-241.12c          
- 6000.12c   -0.047950              % C-nat.12c           
+92235.<FTL>c   -0.005807              % U-235.12c           
+92238.<FTL>c   -0.811021              % U-238.12c           
+94238.<FTL>c   -0.003651              % Pu-238.12c          
+94239.<FTL>c   -0.075724              % Pu-239.12c          
+94240.<FTL>c   -0.035022              % Pu-240.12c          
+94241.<FTL>c   -0.010006              % Pu-241.12c          
+94242.<FTL>c   -0.009871              % Pu-242.12c          
+95241.<FTL>c   -0.000947              % Am-241.12c          
+ 6000.<FTL>c   -0.047950              % C-nat.12c           
                                                          
 % --- Outer core(U,Pu)C fuel: fuel2                             
                                                          
 mat fuel2   -10.89638                
                                                          
-92235.12c   -0.005567              % U-235.12c                             
-92238.12c   -0.777506              % U-238.12c                             
-94238.12c   -0.004563              % Pu-238.12c                            
-94239.12c   -0.094633              % Pu-239.12c                            
-94240.12c   -0.043768              % Pu-240.12c                            
-94241.12c   -0.012505              % Pu-241.12c                            
-94242.12c   -0.012336              % Pu-242.12c                            
-95241.12c   -0.001183              % Am-241.12c                            
- 6000.12c   -0.047939              % C-nat.12c                             
+92235.<FTL>c   -0.005567              % U-235.12c                             
+92238.<FTL>c   -0.777506              % U-238.12c                             
+94238.<FTL>c   -0.004563              % Pu-238.12c                            
+94239.<FTL>c   -0.094633              % Pu-239.12c                            
+94240.<FTL>c   -0.043768              % Pu-240.12c                            
+94241.<FTL>c   -0.012505              % Pu-241.12c                            
+94242.<FTL>c   -0.012336              % Pu-242.12c                            
+95241.<FTL>c   -0.001183              % Am-241.12c                            
+ 6000.<FTL>c   -0.047939              % C-nat.12c                             
                                                          
 % --- Tungsten-Rhenium liner: wre                        
                                                          
@@ -707,11 +708,6 @@ mat aim1    -7.95
 42098.09c   -0.001960              % Mo-98.09c 
 42100.09c   -0.007663              % Mo-100.09c
 22000.09c   -0.004000              % Ti-Nat.09c
-%22046.09c  -0.000317              % Ti-46.09c
-%22047.09c  -0.000292              % Ti-47.09c
-%22048.09c  -0.002954              % Ti-48.09c
-%22049.09c  -0.000221              % Ti-49.09c
-%22050.09c  -0.000216              % Ti-50.09c
 14028.09c   -0.007809              % Si-28.09c
 14029.09c   -0.000410              % Si-29.09c
 14030.09c   -0.000280              % Si-30.09c
