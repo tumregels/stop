@@ -18,7 +18,7 @@ RAD = linspace(3,6,20);% RAD vector between 3 and 6 cm.
 
 for i = 1:length(RAD)
     
-    sim.name = ['case_' num2str(i)];
+    sim.name = sprintf('case_%02d', i);
     sim.run('TITLE','"critical sphere"','RAD',RAD(i));
     
 end

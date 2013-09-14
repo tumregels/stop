@@ -1,0 +1,55 @@
+% Monte Carlo criticality simulation in a 239Pu sphere. 
+% Repeat the simulation for various radiuses of the sphere, 
+% and find criticallity radius.
+
+set title <TITLE>
+
+% --- sph cell:
+
+surf 1 sph 0 0 0 <RAD>
+
+cell 1 0 water     -1
+cell 2 0 outside    1
+
+% --- Water:
+
+mat water   -1.0  %moder lwtr 1001
+ 1001.03c    2.0
+ 8016.03c    1.0
+
+% --- Cross section library file path:
+
+set acelib "/home/asikth/Documents/xsdata/jeff31/sss_jeff31.xsdata"
+
+% --- boundary condition:
+                         
+set bc 1 % black  
+
+% --- Point source 
+
+set nps 50000 500
+
+src 1 sp 0 0 0 se 2.5E-8  
+
+set srcrate 1.0 % number of neutrons emitted per second
+
+% --- Geometry and mesh plots:  
+
+plot 3 500 500
+mesh 3 500 500
+
+% --- get data for universe 0
+
+set gcu 0
+
+% --- radial flux
+
+det 1
+du 0
+dz 0.0 15.0 150
+
+% --- spectrum
+
+ene 1 3 1000 1E-11 1.0
+
+det 2 de 1 dt -3
