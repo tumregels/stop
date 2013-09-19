@@ -29,11 +29,11 @@ Requirements
 Documentation
 -------------
 
-- To [download and install](https://github.com/tumregels/stop/wiki/Install) the wrapper.
+- To [download and install](https://github.com/tumregels/stop/wiki/Install) the wrapper
 
-- Short [tutorial](https://github.com/tumregels/stop/wiki/Kickstart) on how to use the code.
+- Short [tutorial](https://github.com/tumregels/stop/wiki/Kickstart) on how to use the code
 
-- Full documentation is [here](https://github.com/tumregels/stop/wiki)
+- [Full documentation](https://github.com/tumregels/stop/wiki) of the code
 
 Licensing
 ---------

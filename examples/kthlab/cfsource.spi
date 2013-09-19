@@ -1,0 +1,105 @@
+% cfsource
+
+set title <TITLE>
+
+% --- sph cell:
+
+surf 1 sph 0 0 0 4.5
+surf 2 sph 0 0 0 <RAD>
+
+cell 1 0 <FILL>    -1
+cell 2 0 water      1  -2
+cell 3 0 outside        2
+
+
+% cadmium sphere defined in universe 2
+
+surf 21 sph 0 0 0 4.3
+surf 22 sph 0 0 0 4.5
+
+cell 1CD    2  water     -21
+cell 2CD    2  cadmium    21 -22 % Cd layer 2mm
+cell 3CD    2  water      22
+
+
+mat water   -1.0  % moder lwtr 1001
+ 1001.03c    2.0
+ 8016.03c    1.0
+
+mat cadmium -8.65
+ 48106.03c 	 1.25 	
+ 48108.03c 	 0.89 
+ 48110.03c 	 12.49  	
+ 48111.03c 	 12.80 
+ 48112.03c 	 24.13 
+ 48113.03c 	 12.22
+ 48114.03c 	 28.73	
+ 48116.03c 	 7.49
+
+% --- black boundary
+                    
+set bc 1
+
+% --- fix seed
+
+set seed 1379177839  
+
+% --- Point source 
+
+set nps 10000 500
+
+src 1 sp 0 0 0 sr 98252.03c 18 <SE>
+
+% --- number of neutrons emitted per second
+
+set srcrate 1.0 
+
+% --- get data for universe 0
+
+set gcu 0
+set nfg 2 0.625E-6 % 3.6E-7 % 1.0
+
+% --- Geometry and mesh plots:  
+
+plot 3 1000 1000
+mesh 3 500 500
+
+% --- Cross section library file path:
+
+set acelib "/home/asikth/Documents/xsdata/jeff31/sss_jeff31.xsdata"
+
+
+% --- DETECTORS
+
+% --- radial thermal flux
+
+ene 1 1 1E-11 0.625E-6
+
+det 1
+de  1
+du  0
+dz  0.0 50.0 200
+
+% --- radial thermal and fast flux
+
+ene 2 1 1E-11 0.625E-6 20
+
+det 2
+de  2
+du  0
+dz  0.0 50.0 200
+
+% --- radial total flux
+
+det 3
+du  0
+dz  0.0 50.0 200
+
+% --- spectrum
+
+ene 4 3 100 1E-11 20.0
+
+det 4 
+de  4
+dc  2 
+dt -3

@@ -1,0 +1,290 @@
+% kthlab
+
+set title <TITLE>
+
+% % --- geometry of the lab, real geometry
+% 
+% surf 1 pz -10
+% surf 2 pz 0
+% surf 3 pz 0.7
+% surf 4 pz 95
+% surf 5 pz 110
+% 
+% surf 6 cyl 8.5  0.0  4.5
+% surf 7 cyl 0.0  0.0  47.8
+% surf 8 cyl 0.0  0.0  48.5
+% surf 9 cyl 0.0  0.0  100.0
+% 
+% cell  1   0   outside   -1             -6
+% cell  2   0   concrete   1 -2          -6
+% cell  3   0   steel         2 -3       -6
+% cell  4   0   <FILL>           3 -4    -6
+% cell  5   0   air                 4 -5 -6
+% cell  6   0   outside                5 -6
+%  
+% cell  8   0   outside   -1              6 -7
+% cell  9   0   concrete   1 -2           6 -7
+% cell  0   0   steel         2 -3        6 -7
+% cell 11   0   fill 2           3 -4     6 -7
+% cell 12   0   air                 4 -5  6 -7
+% cell 13   0   outside                5  6 -7
+% 
+% cell 15   0   outside   -1                 7 -8
+% cell 16   0   concrete   1 -2              7 -8
+% cell 17   0   steel         2 -3           7 -8
+% cell 18   0   steel            3 -4        7 -8
+% cell 19   0   steel               4 -5     7 -8
+% cell 20   0   outside                5     7 -8
+%  
+% cell 22   0   outside   -1                    8 -9
+% cell 23   0   concrete   1 -2                 8 -9
+% cell 24   0   air           2 -3              8 -9
+% cell 25   0   air              3 -4           8 -9
+% cell 26   0   air                 4 -5        8 -9
+% cell 27   0   outside                5        8 -9
+% 
+% cell 29   0   outside   -1                       9
+% cell 30   0   outside    1 -2                    9
+% cell 31   0   outside       2 -3                 9
+% cell 32   0   outside          3 -4              9
+% cell 33   0   outside             4 -5           9
+% cell 34   0   outside                5           9
+
+% --- universe 0: geometry of the lab, simplified geometry
+
+surf 1 cyl 8.5  0.0  4.5   0.7  95
+surf 2 cyl 0.0  0.0  47.8  0.7  95
+surf 3 cyl 0.0  0.0  48.5  0.7  95
+
+cell 1 0 <FILL> -1
+cell 2 0 fill 2  1 -2
+cell 3 0 steel      2 -3
+cell 4 0 outside       3
+   
+
+% --- universe 2: water
+
+surf 21 cyl 8.5  0.0  4.5   0.7  95.0
+surf 22 cyl 0.0  0.0  47.8  0.7  95.0
+ 
+cell 1W 2 outside -21 
+cell 2W 2 water    21 -22
+cell 3W 2 outside      22
+
+
+% --- universe 3: water
+
+surf 31 cyl 8.5  0.0  4.5   0.7  95.0
+
+cell 1S 3 water   -31
+cell 2S 3 outside  31
+
+
+% --- universe 4: water with Cd sphere
+
+surf 41 sph 8.5   0.0  51.5    4.3
+surf 42 sph 8.5   0.0  51.5    4.5
+
+surf 43 cyl 8.5   0.0   4.5    0.7  95
+
+cell 1SCd 4 water   -41    
+cell 2SCd 4 cadmium  41 -42
+cell 3SCd 4 water        42 -43
+cell 4SCd 4 outside          43
+
+
+% --- universe 5: SS tube (uni 53) + Cd sphere (52)
+
+surf 51 pz 0.7
+surf 52 pz 56
+surf 53 pz 95
+
+surf 54 cyl 8.5   0.0   4.5
+
+cell 1SCdSS 5 outside  -54 -51
+cell 2SCdSS 5 fill 52  -54  51 -52
+cell 3SCdSS 5 fill 53  -54      52 -53
+cell 4SCdSS 5 outside  -54          53
+
+
+cell 5SCdSS 5 outside   54 -51
+cell 6SCdSS 5 outside   54  51 -52
+cell 7SCdSS 5 outside   54      52 -53
+cell 8SCdSS 5 outside   54          53
+
+% universe 52 for universe 5: region of sphere within lower cylinder 
+
+surf  521  sph  8.5   0.0  51.5  4.3
+surf  522  sph  8.5   0.0  51.5  4.5
+
+surf  523  cyl  8.5   0.0   4.5  0.7  56
+
+cell 1Sp 52 water     -521
+cell 2Sp 52 cadmium    521 -522
+cell 3Sp 52 water           522 -523
+cell 4Sp 52 outside              523
+
+% universe 53 for universe 5: region of tube within upper cylinder 
+
+surf 531  cyl  8.5   0.0   0.3    56.0   95
+surf 532  cyl  8.5   0.0   0.5    56.0   95
+surf 533  cyl  8.5   0.0   4.5    56.0   95
+
+cell 1T  53 water  -531
+cell 2T  53 steel   531 -532
+cell 3T  53 water        532 -533
+cell 4T  53 outside           533
+
+
+% --- universe 6: SS tube (uni 63) only
+
+surf 61 pz 0.7
+surf 62 pz 56
+surf 63 pz 95
+
+surf 64 cyl 8.5   0.0   4.5
+
+cell 1SS 6 outside  -64 -61
+cell 2SS 6 water    -64  61 -62
+cell 3SS 6 fill 53  -64      62 -63
+cell 4SS 6 outside  -64          63
+
+
+cell 5SS 6 outside   64 -61
+cell 6SS 6 outside   64  61 -62
+cell 7SS 6 outside   64      62 -63
+cell 8SS 6 outside   64          63
+
+% universe 63 for universe 6: region of tube within upper cylinder 
+
+surf 631  cyl  8.5   0.0   0.3    56.0   95
+surf 632  cyl  8.5   0.0   0.5    56.0   95
+surf 633  cyl  8.5   0.0   4.5    56.0   95
+
+cell 1T  63 water  -631
+cell 2T  63 steel   631 -632
+cell 3T  63 water        632 -633
+cell 4T  63 outside           633
+
+% --- Water:
+
+mat water   -1.0  %moder lwtr 1001
+ 1001.03c    2.0
+ 8016.03c    1.0
+
+mat steel   -8.0
+ 24050.03c  -0.00710
+ 24052.03c  -0.14229
+ 24053.03c  -0.01645
+ 24054.03c  -0.00417
+ 26054.03c  -0.03839  
+ 26056.03c  -0.62493  
+ 26057.03c  -0.01469  
+ 26058.03c  -0.00199
+ 28058.03c  -0.08736
+ 28060.03c  -0.03481
+ 28061.03c  -0.00154
+ 28062.03c  -0.00498
+ 28064.03c  -0.00131
+ 42092.03c  -0.00297
+ 42094.03c  -0.00185
+ 42095.03c  -0.00318
+ 42096.03c  -0.00334
+ 42097.03c  -0.00191
+ 42098.03c  -0.00483
+
+mat concrete -2.30
+  1001.03c   -0.0062
+  6000.03c   -0.1752
+  8016.03c   -0.4102
+ 13027.03c   -0.0108
+ 14000.03c   -0.0345
+ 19000.03c   -0.0011
+ 20000.03c   -0.3213
+ 25055.03c   -0.0326
+ 26000.03c   -0.0078
+
+mat air      -0.001 
+ 7014.06c -1.0
+
+mat cadmium -8.65
+ 48106.03c 	 1.25 	
+ 48108.03c 	 0.89 
+ 48110.03c 	 12.49  	
+ 48111.03c 	 12.80 
+ 48112.03c 	 24.13 
+ 48113.03c 	 12.22
+ 48114.03c 	 28.73	
+ 48116.03c 	 7.49
+
+% --- black boundary
+                    
+set bc 1
+
+% --- fix seed
+
+set seed 1379177839  
+
+% --- Point source 
+
+set nps 10000 500
+
+src 1 sp 8.5 0 51.5 sr 98252.03c 18
+
+% --- number of neutrons emitted per second
+
+set srcrate 1.0 
+
+% --- get data for universe 0
+
+set gcu 0 2
+set nfg 2 0.625E-6 % 3.6E-7 % 1.0
+
+% --- Geometry and mesh plots: 
+
+plot 1 1000 1000 8.5 -80 80 -20 150
+plot 2 1000 1000 0   -100 100 -20 150
+plot 3 1000 1000 52  -50  50  -50 50
+
+mesh 1 500 500 0     0  110 -48.5 48.5
+mesh 2 500 500 0 -48.5 48.5     0 110
+mesh 3 500 500 0 -48.5 48.5 -48.5 48.5
+
+% --- Cross section library file path:
+
+set acelib "/home/asikth/Documents/xsdata/jeff31/sss_jeff31.xsdata"
+
+% --- DETECTORS
+
+% --- radial thermal flux
+
+ene 1 1 1E-11 0.625E-6
+
+det 1
+de  1
+du  0
+dz  0.0 50.0 200
+
+% --- radial thermal and fast flux
+
+ene 2 1 1E-11 0.625E-6 20
+
+det 2
+de  2
+du  0
+dz  0.0 50.0 200
+
+% --- radial total flux
+
+det 3
+du  0
+dz  0.0 50.0 200
+
+% --- spectrum
+
+ene 4 3 100 1E-11 20.0
+
+det 4 
+de  4
+du  2
+dt -3
