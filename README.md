@@ -4,10 +4,18 @@ stop
 What is it?
 -----------
 
-**stop** is a wrapper code for the [Serpent Monte Carlo code][1]. 
+**stop** is a wrapper code for the 
+[Serpent Monte Carlo code](http://montecarlo.vtt.fi). 
 The code is written in Matlab and allows automated generation 
 and execution of Serpent input files. The code also generates 
-[PARCS][2] compatiple XSEC cards.
+[PARCS](https://engineering.purdue.edu/PARCS) compatible XSEC cards.
+
+Inspired by Bryan Herman's [SerpentXS](http://canes.github.com/SerpentXS/).
+Developed at [FAST](http://fast.web.psi.ch/) under supervision of Dr. K. Mikityuk.
+Initial version of the code and simulation result are reported 
+[here](http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-118072).
+Final polishing of the code was encouraged and supported by Prof. W. Gudowski 
+at [KTH](http://www.neutron.kth.se/).
 
 Requirements
 ------------
@@ -22,19 +30,16 @@ Documentation
 -------------
 
 To download and install **stop** wrapper, 
-follow the instructions [here][3].
+follow the instructions 
+[here](https://github.com/tumregels/stop/wiki/Install).
 
-Short tutorial on how to use the wrapper is [here][4].
+Short tutorial on how to use the wrapper is 
+[here](https://github.com/tumregels/stop/wiki/Kickstart).
 
 Licensing
 ---------
 
-MIT licensed. See the [LICENSE][5] for full details.
-
-[1]: http://montecarlo.vtt.fi
-[2]: https://engineering.purdue.edu/PARCS
-[3]: https://github.com/tumregels/stop/wiki/Install
-[4]: https://github.com/tumregels/stop/wiki/Kickstart
-[5]: https://github.com/tumregels/stop/blob/master/LICENSE
-
+MIT licensed. 
+See the [LICENSE](https://github.com/tumregels/stop/blob/master/LICENSE) 
+for full details.
 
