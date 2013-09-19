@@ -54,7 +54,7 @@ set title <TITLE>
 
 surf 1 cyl 8.5  0.0  4.5   0.7  95
 surf 2 cyl 0.0  0.0  47.8  0.7  95
-surf 3 cyl 0.0  0.0  48.5  0.7  95
+surf 3 cyl 0.0  0.0  48.5  0.0  95
 
 cell 1 0 <FILL> -1
 cell 2 0 fill 2  1 -2
@@ -130,10 +130,10 @@ surf 531  cyl  8.5   0.0   0.3    56.0   95
 surf 532  cyl  8.5   0.0   0.5    56.0   95
 surf 533  cyl  8.5   0.0   4.5    56.0   95
 
-cell 1T  53 water  -531
-cell 2T  53 steel   531 -532
-cell 3T  53 water        532 -533
-cell 4T  53 outside           533
+cell 1T5  53 water  -531
+cell 2T5  53 steel   531 -532
+cell 3T5  53 water        532 -533
+cell 4T5  53 outside           533
 
 
 % --- universe 6: SS tube (uni 63) only
@@ -161,10 +161,10 @@ surf 631  cyl  8.5   0.0   0.3    56.0   95
 surf 632  cyl  8.5   0.0   0.5    56.0   95
 surf 633  cyl  8.5   0.0   4.5    56.0   95
 
-cell 1T  63 water  -631
-cell 2T  63 steel   631 -632
-cell 3T  63 water        632 -633
-cell 4T  63 outside           633
+cell 1T6  63 water  -631
+cell 2T6  63 steel   631 -632
+cell 3T6  63 water        632 -633
+cell 4T6  63 outside           633
 
 % --- Water:
 
@@ -238,7 +238,7 @@ set srcrate 1.0
 % --- get data for universe 0
 
 set gcu 0 2
-set nfg 2 0.625E-6 % 3.6E-7 % 1.0
+<setnfg> % set nfg 2 0.625E-6 % 3.6E-7 % 1.0
 
 % --- Geometry and mesh plots: 
 
@@ -263,7 +263,7 @@ ene 1 1 1E-11 0.625E-6
 det 1
 de  1
 du  0
-dz  0.0 50.0 200
+dx  8.5 50.0 200
 
 % --- radial thermal and fast flux
 
@@ -272,13 +272,13 @@ ene 2 1 1E-11 0.625E-6 20
 det 2
 de  2
 du  0
-dz  0.0 50.0 200
+dx  8.5 50.0 200
 
 % --- radial total flux
 
 det 3
 du  0
-dz  0.0 50.0 200
+dx  8.5 50.0 200
 
 % --- spectrum
 

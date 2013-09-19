@@ -12,7 +12,7 @@ and execution of Serpent input files. The code also generates
 
 Inspired by B. Herman's [SerpentXS](http://canes.github.com/SerpentXS/).
 Developed at [FAST](http://fast.web.psi.ch/) under supervision of Dr. K. Mikityuk.
-Initial version of the code and simulation result are reported 
+Initial version of the code and simulation results are reported 
 [here](http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-118072).
 Final polishing of the code was encouraged and supported by Prof. W. Gudowski 
 at [KTH](http://www.neutron.kth.se/).

@@ -57,7 +57,7 @@ set srcrate 1.0
 % --- get data for universe 0
 
 set gcu 0
-set nfg 2 0.625E-6 % 3.6E-7 % 1.0
+<setnfg> % set nfg 2 0.625E-6 % 3.6E-7 % 1.0
 
 % --- Geometry and mesh plots:  
 
@@ -78,7 +78,7 @@ ene 1 1 1E-11 0.625E-6
 det 1
 de  1
 du  0
-dz  0.0 50.0 200
+dx  0.0 41.5 200
 
 % --- radial thermal and fast flux
 
@@ -87,13 +87,13 @@ ene 2 1 1E-11 0.625E-6 20
 det 2
 de  2
 du  0
-dz  0.0 50.0 200
+dx  0.0 41.5 200
 
 % --- radial total flux
 
 det 3
 du  0
-dz  0.0 50.0 200
+dx  0.0 41.5 200
 
 % --- spectrum
 
