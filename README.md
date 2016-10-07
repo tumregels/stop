@@ -24,7 +24,7 @@ Requirements
 
 - Matlab 2008a or higher
 
-- Serpent MC
+- Serpent MC version 1 (version 2 not supported)
 
 Documentation
 -------------
